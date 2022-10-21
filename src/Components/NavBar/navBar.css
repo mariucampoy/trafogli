@@ -1,0 +1,27 @@
+.promocion{
+    background-color: rgb(80, 80, 80);
+    color: white;
+    font-size: 0.8rem;
+    padding: 5px 0px;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.logo{
+    width: 20vw;
+}
+
+.a-small{
+    text-decoration: none;
+    font-size: 0.7rem;
+    color: black;
+    padding: 0px 5px;
+}
+
+.a-large{
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: black;
+    margin-top: 3%;
+
+}
