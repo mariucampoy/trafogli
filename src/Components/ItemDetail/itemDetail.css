@@ -1,0 +1,10 @@
+.itemDetail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around
+}
+
+.itemDetail img{
+    width: 90%;
+
+}

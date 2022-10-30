@@ -35,11 +35,11 @@ function NavBar() {
 
       <FlexWrapper>
 
-        <a className='a-large' href='#'>EGYPTIAN COTTON</a>
-        <a className='a-large' href='#'>LINEN</a>
-        <a className='a-large' href='#'>ORGANIC BAMBOO</a>
-        <a className='a-large' href='#'>TODO PARA TU CAMA</a>
-        <a className='a-large' href='#'>TODO PARA VOS</a>
+        <a className='a-large' href='#'>EDREDÓN</a>
+        <a className='a-large' href='#'>SÁBANAS</a>
+        <a className='a-large' href='#'>FUNDA ALMOHADA</a>
+        <a className='a-large' href='#'>MANTAS</a>
+        <a className='a-large' href='#'>KIMONOS</a>
 
       </FlexWrapper>
 
