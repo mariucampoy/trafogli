@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import CartWidget from '../CartWidget/CartWidget'
 import FlexWrapper from "../FlexWrapper/FlexWrapper"
 
@@ -21,8 +22,9 @@ function NavBar() {
         </p>
 
 
-
+        <Link to={"/"}>
         <img className='logo' src='./img/logo.jpg' alt='logo' />
+        </Link>
 
         <FlexWrapper>
           <a className='a-small' href='#'>CREAR CUENTA</a>
@@ -35,11 +37,11 @@ function NavBar() {
 
       <FlexWrapper>
 
-        <a className='a-large' href='#'>EDREDÓN</a>
-        <a className='a-large' href='#'>SÁBANAS</a>
-        <a className='a-large' href='#'>FUNDA ALMOHADA</a>
-        <a className='a-large' href='#'>MANTAS</a>
-        <a className='a-large' href='#'>KIMONOS</a>
+        <Link className='a-large' to='/category/Edredon'>EDREDÓN</Link>
+        <Link className='a-large' to='/category/Sabanas'>SÁBANAS</Link>
+        <Link className='a-large' to='/category/Fundas'>FUNDA ALMOHADA</Link>
+        <Link className='a-large' to='/category/Mantas'>MANTAS</Link>
+        <Link className='a-large' to='/category/Kimono'>KIMONOS</Link>
 
       </FlexWrapper>
 
