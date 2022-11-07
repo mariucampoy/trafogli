@@ -1,22 +1,47 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./itemDetail.css"
 
 function ItemDetail(props) {
+
+
+    const [count, setCount] = useState(1);
+
+    function handleAdd() {
+        if (count < props.stock)
+            setCount(count + 1);
+    }
+
+    function handleSubstract() {
+        if (count > 1)
+            setCount(count - 1)
+    }
+
     return (
         <div className='itemDetail'>
 
-            <div>
+            <div className='imgDetail'>
 
-            <img src={props.img}></img>
+                <img src={props.img}></img>
 
             </div>
 
-            <div>
+            <div className='textDetail'>
 
-                <p><a href='#'>{props.title}</a></p>
+                <p>{props.title}</p>
                 <p>${props.price}</p>
 
-                <button>Agregar al carrito</button>
+
+                <div >
+                    <div className='itemCount'>
+                        <button onClick={handleSubstract}> - </button>
+                        <p>{count}</p>
+                        <button onClick={handleAdd}> + </button>
+                    </div>
+                    <div>
+                        <button className='addCart'>Agregar al carrito</button>
+                    </div>
+                </div>
+
 
             </div>
 

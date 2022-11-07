@@ -1,10 +1,48 @@
 .itemDetail{
     display: flex;
     flex-direction: row;
-    justify-content: space-around
+    justify-content: center
 }
 
 .itemDetail img{
     width: 90%;
 
+}
+
+
+.itemDetail p {
+    margin: 5% 5%
+}
+
+
+.imgDetail{
+width: 40%;
+margin-top: 2%;
+}
+
+.textDetail{
+    width: 40%;
+    margin-top: 2%;
+
+}
+
+.itemCount{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.itemCount button{
+    margin: 0% 5%;
+    height: 10%;
+}
+
+.itemCount p{
+    margin: 0% 0%;
+}
+
+.addCart{
+    margin: 5% 5%;
+    width: 70%;
+    padding: 1% 0%;
 }

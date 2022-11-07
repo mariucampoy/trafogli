@@ -8,7 +8,7 @@ function Item(props) {
         <div className='item'>
 
             <img src={props.img}></img>
-            <p><a href='#'>{props.title}</a></p>
+            <p><Link to={`/detalle/${props.id}`}>{props.title}</Link></p>
             <p>${props.price}</p>
 
             <Link to={`/detalle/${props.id}`}>

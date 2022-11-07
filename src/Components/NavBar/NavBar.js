@@ -22,7 +22,7 @@ function NavBar() {
         </p>
 
 
-        <Link to={"/"}>
+        <Link to="/">
         <img className='logo' src='./img/logo.jpg' alt='logo' />
         </Link>
 

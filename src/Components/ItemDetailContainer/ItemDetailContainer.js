@@ -21,6 +21,7 @@ function ItemDetailContainer() {
         img={product.img}
         title={product.title}
         price={product.price}
+        stock={product.stock}
 
         />
 
