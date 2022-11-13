@@ -1,0 +1,20 @@
+.container-cart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cart{
+    text-decoration: none;
+    color: black;
+}
+
+.container-cart p{
+    background-color: rgb(70, 68, 68);
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    padding: 5% 20%;
+    margin: 0% 10%;
+    font-size: 0.8rem;
+}

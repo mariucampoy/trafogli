@@ -18,10 +18,12 @@ function ItemDetailContainer() {
 
         <ItemDetail
 
-        img={product.img}
-        title={product.title}
-        price={product.price}
-        stock={product.stock}
+        product={product}
+
+        // img={product.img}
+        // title={product.title}
+        // price={product.price}
+        // stock={product.stock}
 
         />
 

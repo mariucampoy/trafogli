@@ -23,7 +23,7 @@ function NavBar() {
 
 
         <Link to="/">
-        <img className='logo' src='./img/logo.jpg' alt='logo' />
+        <img className='logo' src='/img/logo.jpg' alt='logo' />
         </Link>
 
         <FlexWrapper>

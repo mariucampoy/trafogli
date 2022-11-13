@@ -1,0 +1,24 @@
+.cart-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 10%;
+}
+
+.cart-img img{
+  width: 100%;
+}
+
+.cart-img{
+ width: 10%;
+margin-top: 3%;
+}
+
+.cart-detail{
+    width: 40%;
+    margin-top: 2%;
+}
+
+.cart-detail p {
+    margin: 5% 10%
+}
