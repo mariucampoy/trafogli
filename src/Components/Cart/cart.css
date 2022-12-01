@@ -22,3 +22,14 @@ margin-top: 3%;
 .cart-detail p {
     margin: 5% 10%
 }
+
+.delete-button{
+    width: 3%;
+    background-color: white;
+    border: none;
+}
+
+.delete-img{
+    width: 100%;
+    background-color: white;
+}

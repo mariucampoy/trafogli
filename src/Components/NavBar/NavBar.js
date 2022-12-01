@@ -41,7 +41,7 @@ function NavBar() {
         <Link className='a-large' to='/category/Sabanas'>SÁBANAS</Link>
         <Link className='a-large' to='/category/Fundas'>FUNDA ALMOHADA</Link>
         <Link className='a-large' to='/category/Mantas'>MANTAS</Link>
-        <Link className='a-large' to='/category/Kimono'>KIMONOS</Link>
+        <Link className='a-large' to='/category/Kimonos'>KIMONOS</Link>
 
       </FlexWrapper>
 

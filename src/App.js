@@ -8,7 +8,11 @@ import Cart from './Components/Cart/Cart';
 
 
 function App() {
+
+
+
   return (
+
     <CartContextProvider>
     <BrowserRouter>
 
@@ -19,10 +23,15 @@ function App() {
        <Route path='/category/:categoryid' element={ <ItemListContainer/>} />
        <Route path='/detail/:id' element={ <ItemDetailContainer/>} />
        <Route path='/cart' element={ <Cart/>} />
+       <Route path='/checkout/:orderId' element={ <h1>Datos de la compra</h1>} />
       </Routes>
 
     </BrowserRouter>
     </CartContextProvider>
+
+
+
+
   );
 }
 
