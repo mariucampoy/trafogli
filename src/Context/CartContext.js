@@ -50,18 +50,14 @@ function totalPriceInCart() {
   }
 
 
-function removeItem(itemId){
-    cart.filter(item => {
-        let newCart = item.id !== itemId.id
-        setCart(newCart)
-        return newCart
-    })
 
+function removeItem(itemId){
+    let newCart = cart.filter ((item) => item.id !== itemId)
+    setCart(newCart);
 }
 
 function clear(){
     setCart([])
-
 }
 
 
