@@ -3,6 +3,7 @@
     position: sticky;
     background-color: white;
     z-index: 9;
+
 }
 
 .sub-navbar{
@@ -31,6 +32,7 @@
 
 .logo{
     width: 20vw;
+
 }
 
 .container-inicio-sesion{

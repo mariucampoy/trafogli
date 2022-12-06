@@ -1,0 +1,8 @@
+
+.whatsapp-container{
+    position: sticky;
+    bottom: 5%;
+    left: 90%;
+    width: 5%;
+    z-index: 10;
+}

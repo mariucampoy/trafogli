@@ -1,19 +1,26 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 
 import "./itemListContainer.css"
 
 function CategoryItem(props) {
-  return (
+    return (
 
-    <div className=" category-card">
+        <div className="category-card">
+        <Link to={props.link}>
 
-      <img className='img-card hover-zoom' src={props.img} alt="Card image" />
+            <div className="container-img-card">
+                <img className='img-card' src={props.img} alt="Card image" />
+            </div>
 
-        <h2>{props.title}</h2>
-        <p>{props.text}</p>
-    </div>
+            <div className="container-text-card">
+                <h2 className="title-card">{props.title}</h2>
+                <p className="text-card">{props.text}</p>
+            </div>
+        </Link>
+        </div>
 
-  );
+    );
 }
 
 export default CategoryItem;

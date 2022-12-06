@@ -1,29 +1,47 @@
-.carousel{
+/* CAROUSEL COMPONENT */
+
+.carousel {
     padding: 0 5%;
     width: 100vw;
     margin-bottom: 2%;
 }
 
-.container-categoryItem{
+.container-categoryItem {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin: 0 2%;
 }
 
+/* CATEGORY CARD COMPONENT */
 
-.category-card{
+.category-card {
+    position: relative;
     width: 30%;
     border: none;
     margin: 1% 1%;
 }
 
+.container-img-card {
 
-.img-card{
-    width: 90%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+
 }
 
-.hover-zoom:hover{
+.img-card {
     width: 100%;
+    transition: 0.5s all ease-in-out;
+}
+
+.container-img-card:hover img {
+    transform: scale(1.2);
+}
+
+.container-text-card{
+    position: absolute;
+    top: 5%;
+    left: 10%;
 }
 
