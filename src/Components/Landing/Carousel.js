@@ -1,5 +1,5 @@
 import Carousel from 'react-bootstrap/Carousel';
-import "./itemListContainer.css"
+import "./landing.css"
 
 
 function CarouselBoostrap() {

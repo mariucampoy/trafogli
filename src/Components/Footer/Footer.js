@@ -27,6 +27,29 @@ function Footer() {
                 </ul>
             </div>
 
+            <div>
+                <h4>Medios de pago</h4>
+            </div>
+
+            <div>
+                <div>
+                    <h4>Contactanos</h4>
+                    <ul>
+                        <li><a href="tel:+54 11 3850 1171">+54 11 3850 1171</a></li>
+                        <li><a href="mailto:info@trafogli.com">info@trafogli.com</a></li>
+                        <li>Belgrano-CABA</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+            <h4>Redes Sociales</h4>
+            </div>
+
+            <div>
+            <h4>Newsletter</h4>
+            </div>
+
 
         </div>
     )

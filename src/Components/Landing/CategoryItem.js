@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom'
-
-import "./itemListContainer.css"
+import "./landing.css"
 
 function CategoryItem(props) {
     return (

@@ -8,8 +8,8 @@ import Cart from './Components/Cart/Cart';
 import Checkout from './Components/Checkout/Checkout';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './Components/Footer/Footer';
+import Landing from './Components/Landing/Landing';
 import "./App.css"
-
 
 function App() {
 
@@ -23,7 +23,8 @@ function App() {
         <NavBar/>
 
         <Routes>
-          <Route path='/' element={<ItemListContainer />} />
+          <Route path='/' element={<Landing/>} />
+          <Route path='/productos' element={<ItemListContainer />} />
           <Route path='/category/:categoryid' element={<ItemListContainer />} />
           <Route path='/detail/:id' element={<ItemDetailContainer />} />
           <Route path='/cart' element={<Cart />} />

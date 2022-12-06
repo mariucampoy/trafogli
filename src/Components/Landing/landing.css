@@ -41,7 +41,39 @@
 
 .container-text-card{
     position: absolute;
-    top: 5%;
+    top: 20%;
     left: 10%;
+    color: white;
+    text-decoration: none;
+}
+
+
+.container-ver-productos{
+   text-align: center;
+   margin: 5% 0;
+
+}
+
+.btn-ver-productos{
+    background-color: rgba(73, 88, 54, 0.654);
+    color: white;
+    border: none;
+    padding: 0.5% 5%;
+    font-size: 90%;
+
+}
+
+.btn-ver-productos:hover{
+    background-color: rgba(97, 106, 84, 0.654);
+}
+
+.container-nuestro-compromiso{
+    width: 90%;
+    margin: 5% 5%;
+}
+
+.img-nuestro-compromiso{
+    width: 100%;
+
 }
 
