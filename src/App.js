@@ -6,6 +6,7 @@ import NavBar from "./Components/NavBar/NavBar"
 import { CartContextProvider } from './Context/CartContext';
 import Cart from './Components/Cart/Cart';
 import Checkout from './Components/Checkout/Checkout';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {

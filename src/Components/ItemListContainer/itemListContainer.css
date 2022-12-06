@@ -1,0 +1,29 @@
+.carousel{
+    padding: 0 5%;
+    width: 100vw;
+    margin-bottom: 2%;
+}
+
+.container-categoryItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 2%;
+}
+
+
+.category-card{
+    width: 30%;
+    border: none;
+    margin: 1% 1%;
+}
+
+
+.img-card{
+    width: 90%;
+}
+
+.hover-zoom:hover{
+    width: 100%;
+}
+

@@ -1,5 +1,5 @@
 import { Ring } from '@uiball/loaders'
-import FlexWrapper from "../FlexWrapper/FlexWrapper"
+
 
 function Loader() {
     return <Ring
