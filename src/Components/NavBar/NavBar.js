@@ -41,9 +41,9 @@ function NavBar() {
 
       <Link className='a-large' to='/category/Edredon'>QUIÉNES SOMOS</Link>
       <Dropdownboostrap></Dropdownboostrap>
-      <Link className='a-large' to='/category/Edredon'>PREGUNTAS FRECUENTES</Link>
-      <Link className='a-large' to='/category/Edredon'>TÉRMINOS Y CONDICIONES</Link>
-      <Link className='a-large' to='/category/Edredon'>CONTACTO</Link>
+      <Link className='a-large' to='/preguntas-frecuentes'>PREGUNTAS FRECUENTES</Link>
+      <Link className='a-large' to='/terminos-y-condiciones'>TÉRMINOS Y CONDICIONES</Link>
+      <Link className='a-large' to='/contacto'>CONTACTO</Link>
 
 
       </div>

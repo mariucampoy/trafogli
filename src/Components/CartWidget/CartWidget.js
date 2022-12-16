@@ -1,5 +1,4 @@
 import React, { useState ,useContext} from 'react';
-import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import cartContext from '../../Context/CartContext'
 import Cart from '../Cart/Cart';
@@ -11,6 +10,8 @@ function CartWidget() {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+
 
   return (
     <div className='container-cart'>
