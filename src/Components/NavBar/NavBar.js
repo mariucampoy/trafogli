@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import CartWidget from '../CartWidget/CartWidget'
+import Dropdownboostrap from './Dropdown'
 
 
 import "./navBar.css"
@@ -38,11 +39,12 @@ function NavBar() {
 
       <div className='container-categorias'>
 
-        <Link className='a-large' to='/category/Edredon'>EDREDÓN</Link>
-        <Link className='a-large' to='/category/Sabanas'>SÁBANAS</Link>
-        <Link className='a-large' to='/category/Fundas'>FUNDA ALMOHADA</Link>
-        <Link className='a-large' to='/category/Mantas'>MANTAS</Link>
-        <Link className='a-large' to='/category/Kimonos'>KIMONOS</Link>
+      <Link className='a-large' to='/category/Edredon'>QUIÉNES SOMOS</Link>
+      <Dropdownboostrap></Dropdownboostrap>
+      <Link className='a-large' to='/category/Edredon'>PREGUNTAS FRECUENTES</Link>
+      <Link className='a-large' to='/category/Edredon'>TÉRMINOS Y CONDICIONES</Link>
+      <Link className='a-large' to='/category/Edredon'>CONTACTO</Link>
+
 
       </div>
 
