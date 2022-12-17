@@ -12,6 +12,7 @@ import PreguntasFrecuentes from "./Components/PreguntasFrecuentes/PreguntasFrecu
 import TerminosCondiciones from "./Components/TerminosCondiciones/TerminosCondiciones"
 import Contacto from "./Components/Contacto/Contacto"
 import "./App.css"
+import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
 
     <CartContextProvider>
       <BrowserRouter>
-
+        <ScrollToTop />
         <NavBar/>
 
         <Routes>
