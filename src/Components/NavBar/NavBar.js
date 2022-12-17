@@ -39,7 +39,7 @@ function NavBar() {
 
       <div className='container-categorias'>
 
-      <Link className='a-large' to='/category/Edredon'>QUIÉNES SOMOS</Link>
+      <Link className='a-large' to='/quienes-somos'>QUIÉNES SOMOS</Link>
       <Dropdownboostrap></Dropdownboostrap>
       <Link className='a-large' to='/preguntas-frecuentes'>PREGUNTAS FRECUENTES</Link>
       <Link className='a-large' to='/terminos-y-condiciones'>TÉRMINOS Y CONDICIONES</Link>

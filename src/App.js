@@ -8,8 +8,9 @@ import Checkout from './Components/Checkout/Checkout';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './Components/Footer/Footer';
 import Landing from './Components/Landing/Landing';
-import PreguntasFrecuentes from "./Components/PreguntasFrecuentes/PreguntasFrecuentes"
-import TerminosCondiciones from "./Components/TerminosCondiciones/TerminosCondiciones"
+import QuienesSomos from "./Components/Institucional/QuienesSomos"
+import PreguntasFrecuentes from "./Components/Institucional/PreguntasFrecuentes"
+import TerminosCondiciones from "./Components/Institucional/TerminosCondiciones"
 import Contacto from "./Components/Contacto/Contacto"
 import "./App.css"
 import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
@@ -23,6 +24,7 @@ function App() {
     <CartContextProvider>
       <BrowserRouter>
         <ScrollToTop />
+
         <NavBar/>
 
         <Routes>
@@ -31,6 +33,8 @@ function App() {
           <Route path='/category/:categoryid' element={<ItemListContainer />} />
           <Route path='/detail/:id' element={<ItemDetailContainer />} />
           <Route path='/checkout/:orderId' element={<Checkout />} />
+
+          <Route path='/quienes-somos' element={<QuienesSomos />} />
           <Route path='/preguntas-frecuentes' element={<PreguntasFrecuentes />} />
           <Route path='/terminos-y-condiciones' element={<TerminosCondiciones />} />
           <Route path='/contacto' element={<Contacto />} />
