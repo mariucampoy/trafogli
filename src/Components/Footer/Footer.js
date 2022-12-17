@@ -7,7 +7,7 @@ function Footer() {
         <div className='container-footer'>
 
             <div className="footer">
-                <h4 className="footer-title">Navegación</h4>
+                <h4 className="footer-title">NAVEGACIÓN</h4>
                 <ul>
                     <li className="wrap-list-xs">
                         <Link to="/quienessomos">Quiénes Somos</Link>
@@ -28,12 +28,12 @@ function Footer() {
             </div>
 
             <div>
-                <h4>Medios de pago</h4>
+                <h4>MEDIOS DE PAGO</h4>
             </div>
 
             <div>
                 <div>
-                    <h4>Contactanos</h4>
+                    <h4>CONTACTANOS</h4>
                     <ul>
                         <li><a href="tel:+54 11 3850 1171">+54 11 3850 1171</a></li>
                         <li><a href="mailto:info@trafogli.com">info@trafogli.com</a></li>
@@ -42,14 +42,10 @@ function Footer() {
                 </div>
             </div>
 
-            <div>
-            <h4>Redes Sociales</h4>
+            <div className='social-links'>
+            <h4>REDES SOCIALES</h4>
+            <h4>NEWSLETTER</h4>
             </div>
-
-            <div>
-            <h4>Newsletter</h4>
-            </div>
-
 
         </div>
     )
