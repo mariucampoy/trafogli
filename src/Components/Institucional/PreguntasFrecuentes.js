@@ -1,9 +1,10 @@
 import React from 'react'
+import "./institucional.css"
 
 function PreguntasFrecuentes() {
   return (
-    <>
-      <h2>PreguntasFrecuentes</h2>
+    <div className='institucional'>
+      <h2>Preguntas Frecuentes</h2>
 
       <h3>
         ¿Qué formas de pago puedo aprovechar para realizar mi compra?
@@ -101,7 +102,7 @@ function PreguntasFrecuentes() {
 
 
       </p>
-    </>
+    </div>
 
   )
 }

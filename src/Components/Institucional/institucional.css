@@ -1,0 +1,38 @@
+.institucional h2{
+    padding: 2% 5%;
+}
+
+.institucional h3{
+    font-size: 9pt;
+    font-family: Montserrat, sans-serif;
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    font-weight: 700;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    vertical-align: baseline;
+    white-space: pre-wrap;
+    padding: 1% 5%;
+}
+
+.institucional p{
+    font-size: 9pt;
+    background-color: transparent;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    vertical-align: baseline;
+    white-space: pre-wrap;
+    padding: 0 5%;
+}
+
+.icono{
+    width: 5%;
+    margin: 1% 5%;
+}
+
+.image{
+    width: 25%;
+    margin-top: 1%;
+    margin-bottom: 10%;
+    margin-left: 5%;
+}
