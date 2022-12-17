@@ -10,7 +10,7 @@ function Footer() {
                 <h4 className="footer-title">NAVEGACIÓN</h4>
                 <ul>
                     <li className="wrap-list-xs">
-                        <Link to="/quienessomos">Quiénes Somos</Link>
+                        <Link to="/quienes-somos">Quiénes Somos</Link>
                     </li>
                     <li className="wrap-list-xs">
                         <Link to="/productos">Productos</Link>
@@ -32,7 +32,7 @@ function Footer() {
             </div>
 
             <div>
-                <div>
+                <div className='footer-contact'>
                     <h4>CONTACTANOS</h4>
                     <ul>
                         <li><a href="tel:+54 11 3850 1171">+54 11 3850 1171</a></li>

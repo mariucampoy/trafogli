@@ -1,13 +1,45 @@
 * {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat'; 
 }
 
 .container-footer{
+    padding: 45px;
+    position: relative;
+    bottom: -11vh;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
+    align-items: flex-start;
     background-color: rgb(141,146,128);
 }
+
+.container-footer div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container-footer div h4 {
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 16px;
+}
+
+.footer ul,
+.footer-contact ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer ul li a,
+.footer-contact li a,
+.footer-contact li{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-family: 'Montserrat';
+}
+
 
