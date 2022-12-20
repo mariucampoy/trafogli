@@ -3,7 +3,7 @@
 }
 
 .container-footer{
-    padding: 45px;
+    padding: 25px;
     position: relative;
     bottom: -11vh;
     display: flex;
@@ -14,7 +14,10 @@
     background-color: rgb(141,146,128);
 }
 
-.container-footer div {
+.container-footer .footer,
+.container-footer .medios-de-pago, 
+.container-footer .footer-contact-container,
+.container-footer .social-links {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,7 +27,9 @@
 .container-footer div h4 {
     color: white;
     font-family: 'Montserrat';
-    font-size: 16px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    font-weight: 600;
 }
 
 .footer ul,
@@ -36,10 +41,36 @@
 .footer ul li a,
 .footer-contact li a,
 .footer-contact li{
+    padding: 5px;
     text-decoration: none;
     color: white;
     font-size: 14px;
     font-family: 'Montserrat';
+    text-align: left;
 }
 
+.footer-contact-div .fas{
+    padding-right: 10px;
+}
 
+.medios-de-pago img{
+    width: 100%;
+}
+
+.medios-de-pago{
+    width: 15vw;
+}
+
+.social-fas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.social-fas .fab{
+    padding-right: 15px;
+    padding-bottom: 20px;
+    font-size: 25px;
+    color: white;
+}
