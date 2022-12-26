@@ -1,0 +1,14 @@
+.container-item-list-container{
+    display: flex;
+    flex-direction: row;
+    margin: 3% 3%;
+}
+
+.container-filter-items{
+    margin: 0% 3%;
+}
+
+.filter-category{
+    display: flex;
+    flex-direction: column;
+}

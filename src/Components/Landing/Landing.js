@@ -30,6 +30,10 @@ function Landing() {
                 <img className='img-nuestro-compromiso' src="/img/img-home.webp" ></img>
             </div>
 
+            <div className='container-envio-compra'>
+                <img className='img-envio-compra' src="/img/banner-footer-home.png" ></img>
+            </div>
+
         </div>
     )
 }
