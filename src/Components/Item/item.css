@@ -38,4 +38,17 @@
     width: 150px;
 }
 
+.btndetail{
+    background-color: rgba(73, 88, 54, 0.654);
+    color: white;
+    border: none;
+    padding: 0.5% 0.5%;
+    font-size: 90%;
+
+}
+
+.btndetail:hover{
+    background-color: rgba(97, 106, 84, 0.654);
+}
+
 

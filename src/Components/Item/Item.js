@@ -12,10 +12,12 @@ function Item(props) {
             <p className='item-price'>${props.price}</p>
 
             <Link to={`/detail/${props.id}`}>
-            <button className='btndetail btn btn-secondary btn-block'>Ver mas</button>
+            <button className='btndetail'>VER MAS</button>
             </Link>
         </div>
     )
 }
+
+//  btn btn-secondary btn-block
 
 export default Item
