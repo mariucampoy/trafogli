@@ -29,8 +29,6 @@ function ItemDetail({ product }) {
 
         context.addItem(itemForCart)
 
-        swal("Agregado con éxito!", "", "success");
-
         setIsInCart(true)
     }
 
