@@ -8,6 +8,7 @@ import "./itemListContainer.css"
 
 function ItemListContainer() {
   const [productList, setProductList] = useState([])
+
   let categoryid = useParams().categoryid
   let colorid = useParams().colorid
   let medidaid = useParams().medidaid
@@ -33,12 +34,15 @@ function ItemListContainer() {
         setProductList(itemsDB)
       })
     }
+
   }, [categoryid, colorid, medidaid])
 
 
 
   return (
+
     <div className='container-item-list-container'>
+
 
       <div className='container-filter-items'>
       <div className='filter'>
