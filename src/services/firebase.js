@@ -31,7 +31,7 @@ const DB = getFirestore(FirebaseApp);
 
 export async function getItemsFromAPI() {
     try {
-      const docRef = collection(DB, "products");
+      const docRef = collection(DB, "products2");
 
       let docSnap = await getDocs(docRef);
 
@@ -51,7 +51,7 @@ export async function getItemsFromAPI() {
 
 export async function getSingleItemFromAPI(id) {
 
-    const docRef = doc(DB, "products", id);
+    const docRef = doc(DB, "products2", id);
 
     const docSnap = await getDoc(docRef);
 
@@ -70,7 +70,7 @@ export async function getSingleItemFromAPI(id) {
 
 export async function getItemsFromAPIByCategory(categoryId) {
 
-    const docRef = collection(DB, "products");
+    const docRef = collection(DB, "products2");
     const myQuery = query(docRef, where("category", "==", categoryId));
 
     const docSnap = await getDocs(myQuery);
@@ -81,6 +81,43 @@ export async function getItemsFromAPIByCategory(categoryId) {
         id: doc.id,
       };
     });
+
+    return products;
+  }
+
+  export async function getItemsFromAPIByColor(colorId) {
+
+    const docRef = collection(DB, "products2");
+    const myQuery = query(docRef, where("color", "array-contains", colorId));
+
+    const docSnap = await getDocs(myQuery);
+
+    const products = docSnap.docs.map((doc) => {
+      return {
+        ...doc.data(),
+        id: doc.id,
+      };
+
+  });
+
+    return products;
+  }
+
+
+  export async function getItemsFromAPIBySizes(medidaId) {
+
+    const docRef = collection(DB, "products2");
+    const myQuery = query(docRef, where("medida", "array-contains", medidaId));
+
+    const docSnap = await getDocs(myQuery);
+
+    const products = docSnap.docs.map((doc) => {
+      return {
+        ...doc.data(),
+        id: doc.id,
+      };
+
+  });
 
     return products;
   }
@@ -412,7 +449,7 @@ export async function getItemsFromAPIByCategory(categoryId) {
 
 
 export async function createBuyOrderFirestoreWithStock(buyOrderData) {
-    const collectionProductsRef = collection(DB, "products");
+    const collectionProductsRef = collection(DB, "products2");
     const collectionOrdersRef = collection(DB, "buyorders");
     const batch = writeBatch(DB);
 

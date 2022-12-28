@@ -26,6 +26,21 @@ margin-top: 2%;
 
 }
 
+.btn-color-white{
+    background-color: white;
+    border: 1px solid black;
+    width: 5%;
+    height: 5%;
+    margin-right: 2%;
+}
+
+.btn-color-grey{
+    background-color: grey;
+    border: 1px solid black;
+    width: 5%;
+    height: 5%;
+}
+
 .itemCount{
     display: flex;
     flex-direction: row;

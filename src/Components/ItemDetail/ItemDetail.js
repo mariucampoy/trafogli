@@ -1,12 +1,12 @@
 import React, { useState, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import cartContext from '../../Context/CartContext';
-import swal from 'sweetalert';
 import "./itemDetail.css"
 
 function ItemDetail({ product }) {
 
     const [count, setCount] = useState(1);
+    const [medida, setMedida] = useState("queen");
     const [isInCart, setIsInCart] = useState(false)
     const context = useContext(cartContext)
 
@@ -19,12 +19,17 @@ function ItemDetail({ product }) {
             setCount(count - 1)
     }
 
+    function handleChange(e) {
+        setMedida(e.target.value)
 
-    function onAddToCart(count) {
+    }
 
+
+    function onAddToCart(count, medida) {
         const itemForCart = {
             ...product,
-            count
+            count,
+            medida
         }
 
         context.addItem(itemForCart)
@@ -40,7 +45,19 @@ function ItemDetail({ product }) {
             <div className='textDetail'>
                 <p>{product.title}</p>
                 <p>${product.price}</p>
-               <div>
+
+                <p>Color:</p>
+                <button className='btn-color-white'></button>
+                <button className='btn-color-grey'></button>
+
+                <p>Medida:</p>
+                <select onChange={handleChange}>
+                    <option selected value="queen">Queen</option>
+                    <option value="king">King</option>
+                    <option value="superking">Super King</option>
+                </select>
+
+                <div>
                     <div className='itemCount'>
                         <button onClick={handleSubstract}> - </button>
                         <p>{count}</p>
@@ -49,14 +66,14 @@ function ItemDetail({ product }) {
 
                     {!isInCart ? (
                         <div>
-                            <button onClick={() => onAddToCart(count)} className='addCart'>Agregar al carrito</button>
+                            <button onClick={() => onAddToCart(count, medida)} className='addCart'>Agregar al carrito</button>
                             <button>Volver al menu</button>
                         </div>
                     ) : (
 
                         <div>
                             <div>
-                                <button onClick={() => onAddToCart(count)} className='addCart'>Agregar al carrito</button>
+                                <button onClick={() => onAddToCart(count, medida)} className='addCart'>Agregar al carrito</button>
                                 <button>Volver al menu</button>
                             </div>
 
