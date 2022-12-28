@@ -47,6 +47,9 @@ function ItemDetail({ product }) {
 
     return (
         <div className='itemDetail'>
+
+            <div className='imgThumbnails'></div>
+
             <div className='imgDetail'>
                 <img src={product.img}></img>
             </div>
