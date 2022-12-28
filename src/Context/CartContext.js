@@ -10,7 +10,7 @@ const value = {cart, addItem, totalItemsInCart, totalPriceInCart, removeItem, cl
 
 function addItem(itemData){
 
-    let itemFound = cart.find(itemInCart => itemInCart.id === itemData.id)
+    let itemFound = cart.find(itemInCart => itemInCart.id === itemData.id && itemInCart.size == itemData.size && itemInCart.colour == itemData.colour)
 
     if(itemFound){
 

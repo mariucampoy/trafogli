@@ -6,7 +6,8 @@ import "./itemDetail.css"
 function ItemDetail({ product }) {
 
     const [count, setCount] = useState(1);
-    const [medida, setMedida] = useState("queen");
+    const [size, setSize] = useState("Queen");
+    const [colour, setColour] = useState("blanco");
     const [isInCart, setIsInCart] = useState(false)
     const context = useContext(cartContext)
 
@@ -20,16 +21,23 @@ function ItemDetail({ product }) {
     }
 
     function handleChange(e) {
-        setMedida(e.target.value)
+        setSize(e.target.value)
+
+    }
+
+    function handleColour(col) {
+        setColour(col)
+
 
     }
 
 
-    function onAddToCart(count, medida) {
+    function onAddToCart(count, size, colour) {
         const itemForCart = {
             ...product,
             count,
-            medida
+            size,
+            colour,
         }
 
         context.addItem(itemForCart)
@@ -46,15 +54,19 @@ function ItemDetail({ product }) {
                 <p>{product.title}</p>
                 <p>${product.price}</p>
 
-                <p>Color:</p>
-                <button className='btn-color-white'></button>
-                <button className='btn-color-grey'></button>
+
+                <p>Color: <b>{colour.toUpperCase()} </b></p>
+
+                {product.color.map(col => (
+                    <button onClick={() => handleColour(col)} className={`btn-color btn-color-${col}`}></button>
+                ))}
+
 
                 <p>Medida:</p>
                 <select onChange={handleChange}>
-                    <option selected value="queen">Queen</option>
-                    <option value="king">King</option>
-                    <option value="superking">Super King</option>
+                    <option selected value="Queen">Queen</option>
+                    <option value="King">King</option>
+                    <option value="Super King">Super King</option>
                 </select>
 
                 <div>
@@ -66,20 +78,20 @@ function ItemDetail({ product }) {
 
                     {!isInCart ? (
                         <div>
-                            <button onClick={() => onAddToCart(count, medida)} className='addCart'>Agregar al carrito</button>
+                            <button onClick={() => onAddToCart(count, size, colour)} className='addCart'>Agregar al carrito</button>
                             <button>Volver al menu</button>
                         </div>
                     ) : (
 
                         <div>
                             <div>
-                                <button onClick={() => onAddToCart(count, medida)} className='addCart'>Agregar al carrito</button>
+                                <button onClick={() => onAddToCart(count, size, colour)} className='addCart'>Agregar al carrito</button>
                                 <button>Volver al menu</button>
                             </div>
 
-                            <Link to="/cart">
-                                <button>Ir al Carrito</button>
-                            </Link>
+
+                             <p>Agregado al Carrito</p>
+
 
                         </div>
                     )}
