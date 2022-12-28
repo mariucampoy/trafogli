@@ -8,6 +8,7 @@ function ItemDetail({ product }) {
     const [count, setCount] = useState(1);
     const [size, setSize] = useState("Queen");
     const [colour, setColour] = useState("blanco");
+    const [image, setImage] = useState("");
     const [isInCart, setIsInCart] = useState(false)
     const context = useContext(cartContext)
 
@@ -27,6 +28,7 @@ function ItemDetail({ product }) {
 
     function handleColour(col) {
         setColour(col)
+        setImage()
 
 
     }
@@ -43,6 +45,8 @@ function ItemDetail({ product }) {
         context.addItem(itemForCart)
 
         setIsInCart(true)
+
+
     }
 
     return (
@@ -51,26 +55,38 @@ function ItemDetail({ product }) {
             <div className='imgThumbnails'></div>
 
             <div className='imgDetail'>
-                <img src={product.img}></img>
+                <img src={product.img[0]}></img>
             </div>
-            <div className='textDetail'>
-                <p>{product.title}</p>
-                <p>${product.price}</p>
 
 
-                <p>Color: <b>{colour.toUpperCase()} </b></p>
+            <div className='contentDetail'>
+                <p className='contentDetail-Title'>{product.title}</p>
+                <p className='contentDetail-Price'>${product.price}
+                </p>
 
-                {product.color.map(col => (
-                    <button onClick={() => handleColour(col)} className={`btn-color btn-color-${col}`}></button>
-                ))}
 
+                <div className='itemColor'>
+                    <hr></hr>
 
-                <p>Medida:</p>
-                <select onChange={handleChange}>
-                    <option selected value="Queen">Queen</option>
-                    <option value="King">King</option>
-                    <option value="Super King">Super King</option>
-                </select>
+                    <p>Color: <b>{colour.toUpperCase()} </b></p>
+
+                    {product.color.map(col => (
+                        <button onClick={() => handleColour(col)} className={`btn-color btn-color-${col}`}></button>
+                    ))}
+                </div>
+
+                <div className='itemSize'>
+
+                    <p>Medida:</p>
+
+                    <select onChange={handleChange}>
+
+                    {product.medida.map(med => (
+                        <option value={med}>{med.toUpperCase()}</option>
+                    ))}
+
+                    </select>
+                </div>
 
                 <div>
                     <div className='itemCount'>
@@ -78,29 +94,6 @@ function ItemDetail({ product }) {
                         <p>{count}</p>
                         <button onClick={handleAdd}> + </button>
                     </div>
-
-                    {/*
-                    <div className='contentDetail'>
-                <p className='contentDetail-Title'>{product.title}</p>
-                <p className= 'contentDetail-Price'>${product.price}
-                </p>
-
-
-                <div className='itemColor'>
-                <hr></hr>
-                    <p>Color:</p>
-                    <button className='btn-color btn-color-white'></button>
-                    <button className='btn-color btn-color-grey'></button>
-                </div>
-
-                <div className='itemSize'>
-                    <p>Medida:</p>
-                    <select onChange={handleChange}>
-                        <option selected value="queen">Queen</option>
-                        <option value="king">King</option>
-                        <option value="superking">Super King</option>
-                    </select>
-                </div> */}
 
 
                     {!isInCart ? (
