@@ -1,7 +1,8 @@
 .container-item-list-container{
     display: flex;
     flex-direction: row;
-    margin: 3% 3%;
+    margin: 2% 2%;
+  
 }
 
 .container-filter-items{

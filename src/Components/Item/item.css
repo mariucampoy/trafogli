@@ -1,16 +1,22 @@
 .item{
+    flex-grow: 1;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
-    padding: 2% 1%;
-    margin: 1%;
+    padding: 20px 10px;
+    margin: 10px;
     width: 15%;
+    min-width: 200px;
+    max-width: 200px;
     border: 0.5px solid rgba(155, 155, 155, 0.313);
 }
 
 .item img{
     width: 100%;
+    
+    
 }
 
 .item p{
@@ -24,4 +30,26 @@
     font-weight: 400;
     color: black;
 }
+
+.item-description{
+    height: 100px;
+}
+
+.btndetail{
+    width: 150px;
+}
+
+.btndetail{
+    background-color: rgba(73, 88, 54, 0.654);
+    color: white;
+    border: none;
+    padding: 0.5% 0.5%;
+    font-size: 90%;
+
+}
+
+.btndetail:hover{
+    background-color: rgba(97, 106, 84, 0.654);
+}
+
 

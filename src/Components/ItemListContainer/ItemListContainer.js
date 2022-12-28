@@ -41,16 +41,27 @@ function ItemListContainer() {
     <div className='container-item-list-container'>
 
       <div className='container-filter-items'>
+<<<<<<< HEAD
       <div className='filter'>
+=======
+      <div className='filter-category'>
+      <hr></hr>
+>>>>>>> 3b50269e1de21fdaa1ef00e867c1a03826d1f313
       <h2>Categorias</h2>
+      <Link className='a-large' to='/productos'>TODAS</Link>
       <Link className='a-large' to='/category/Edredon'>EDREDÓN</Link>
       <Link className='a-large' to='/category/Sabanas'>SÁBANAS</Link>
       <Link className='a-large' to='/category/Fundas'>FUNDA ALMOHADA</Link>
       <Link className='a-large' to='/category/Mantas'>MANTAS</Link>
       <Link className='a-large' to='/category/Kimonos'>KIMONOS</Link>
       </div>
+<<<<<<< HEAD
 
       <div className='filter'>
+=======
+      <hr></hr>
+      <div>
+>>>>>>> 3b50269e1de21fdaa1ef00e867c1a03826d1f313
         <h2>Filtros</h2>
         <h4>Color</h4>
         <Link className='a-large' to='/color/blanco'>Blanco</Link>
