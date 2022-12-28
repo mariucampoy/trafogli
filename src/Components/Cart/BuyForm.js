@@ -56,7 +56,7 @@ export default function BuyForm(props) {
                 onInputChange={onInputChange}
             />
 
-            <button onClick={onSubmit}>Finalizar Compra</button>
+            <button className='btn-buy' onClick={onSubmit}>Finalizar Compra</button>
         </form>
     );
 }

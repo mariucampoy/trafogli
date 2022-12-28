@@ -39,23 +39,34 @@ function ItemDetail({ product }) {
 
     return (
         <div className='itemDetail'>
+
+            <div className='imgThumbnails'></div>
+
             <div className='imgDetail'>
                 <img src={product.img}></img>
             </div>
-            <div className='textDetail'>
-                <p>{product.title}</p>
-                <p>${product.price}</p>
 
-                <p>Color:</p>
-                <button className='btn-color-white'></button>
-                <button className='btn-color-grey'></button>
+            <div className='contentDetail'>
+                <p className='contentDetail-Title'>{product.title}</p>
+                <p className= 'contentDetail-Price'>${product.price}
+                </p>
+                
 
-                <p>Medida:</p>
-                <select onChange={handleChange}>
-                    <option selected value="queen">Queen</option>
-                    <option value="king">King</option>
-                    <option value="superking">Super King</option>
-                </select>
+                <div className='itemColor'>
+                <hr></hr>
+                    <p>Color:</p>
+                    <button className='btn-color btn-color-white'></button>
+                    <button className='btn-color btn-color-grey'></button>
+                </div>
+
+                <div className='itemSize'>
+                    <p>Medida:</p>
+                    <select onChange={handleChange}>
+                        <option selected value="queen">Queen</option>
+                        <option value="king">King</option>
+                        <option value="superking">Super King</option>
+                    </select>
+                </div>
 
                 <div>
                     <div className='itemCount'>

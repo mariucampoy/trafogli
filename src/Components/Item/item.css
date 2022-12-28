@@ -35,17 +35,14 @@
     height: 100px;
 }
 
-.btndetail{
-    width: 150px;
-}
 
 .btndetail{
+    width: 150px;
     background-color: rgba(73, 88, 54, 0.654);
     color: white;
     border: none;
     padding: 0.5% 0.5%;
     font-size: 90%;
-
 }
 
 .btndetail:hover{

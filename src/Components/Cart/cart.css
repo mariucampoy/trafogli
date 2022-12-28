@@ -53,23 +53,45 @@ margin-top: 3%;
     text-align:  right;
     margin: 5%;
     font-weight: 700;
+}
 
+.container-subtotal p{
+    margin-bottom: 20%;
 }
 
 .container-form{
     text-align: left;
-    margin: 2% 0%;
+    margin-top: 2%;
 }
 
 .label-form{
+    font-size: 0.9em;
     text-align: left;
     margin: 0 2%;
     font-weight: 500;
-    width: 6rem;
+    width: 5rem;
 }
 
 .input-form{
-    width: 13rem;
+    font-size: 0.9em;
+    width: 14rem;
+    padding: 5px;
+    
 }
 
+.btn-buy{
+    width: 200px;
+    background-color: rgba(73, 88, 54, 0.654);
+    color: white;
+    border: none;
+    padding: 0.5% 0.5%;
+    font-size: 90%;
+    margin-top: 10%;
+    margin-right: 5%;
+
+}
+
+.btn-buy:hover{
+    background-color: rgba(97, 106, 84, 0.654);
+}
 
