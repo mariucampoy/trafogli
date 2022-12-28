@@ -79,6 +79,30 @@ function ItemDetail({ product }) {
                         <button onClick={handleAdd}> + </button>
                     </div>
 
+                    {/*
+                    <div className='contentDetail'>
+                <p className='contentDetail-Title'>{product.title}</p>
+                <p className= 'contentDetail-Price'>${product.price}
+                </p>
+
+
+                <div className='itemColor'>
+                <hr></hr>
+                    <p>Color:</p>
+                    <button className='btn-color btn-color-white'></button>
+                    <button className='btn-color btn-color-grey'></button>
+                </div>
+
+                <div className='itemSize'>
+                    <p>Medida:</p>
+                    <select onChange={handleChange}>
+                        <option selected value="queen">Queen</option>
+                        <option value="king">King</option>
+                        <option value="superking">Super King</option>
+                    </select>
+                </div> */}
+
+
                     {!isInCart ? (
                         <div>
                             <button onClick={() => onAddToCart(count, size, colour)} className='addCart'>Agregar al carrito</button>
@@ -93,7 +117,7 @@ function ItemDetail({ product }) {
                             </div>
 
 
-                             <p>Agregado al Carrito</p>
+                            <p>Agregado al Carrito</p>
 
 
                         </div>
