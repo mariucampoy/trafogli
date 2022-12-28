@@ -38,9 +38,9 @@ function Cart() {
     return (
 
         <div>
-
+            
             {cart.map(item => (
-
+                
                 <div className='cart-container'>
                     <div className='cart-img'>
                         <img src={item.img}></img>
@@ -51,13 +51,15 @@ function Cart() {
                         <p>Precio: $ {item.price}</p>
                         <p>Cantidad: {item.count}</p>
                     </div>
+                    
                     <button className='delete-button' onClick={() => removeItem(item.id)}><img className='delete-img' src="/img/delete-button.svg"></img></button>
-
+                    
                 </div>
+                
 
             ))
             }
-
+            
             <div className='container-subtotal'>
                 <p>Subtotal:  ${totalPriceInCart()}</p>
                 <BuyForm onSubmit={createBuyOrder} />

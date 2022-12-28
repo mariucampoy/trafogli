@@ -28,14 +28,16 @@ function ItemListContainer() {
 
       <div className='container-filter-items'>
       <div className='filter-category'>
+      <hr></hr>
       <h2>Categorias</h2>
+      <Link className='a-large' to='/productos'>TODAS</Link>
       <Link className='a-large' to='/category/Edredon'>EDREDÓN</Link>
       <Link className='a-large' to='/category/Sabanas'>SÁBANAS</Link>
       <Link className='a-large' to='/category/Fundas'>FUNDA ALMOHADA</Link>
       <Link className='a-large' to='/category/Mantas'>MANTAS</Link>
       <Link className='a-large' to='/category/Kimonos'>KIMONOS</Link>
       </div>
-
+      <hr></hr>
       <div>
         <h2>Filtros</h2>
         <h4>Color</h4>
