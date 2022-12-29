@@ -47,7 +47,7 @@ function ItemListContainer() {
       <div className='container-filter-items'>
       <div className='filter'>
       <h2>Categorias</h2>
-      <Link className='a-large' to='/productos'>TODAS</Link>
+      <Link className='a-large' to='/productos'> <b> TODAS </b></Link>
       <Link className='a-large' to='/category/Edredon'>EDREDÓN</Link>
       <Link className='a-large' to='/category/Sabanas'>SÁBANAS</Link>
       <Link className='a-large' to='/category/Fundas'>FUNDA ALMOHADA</Link>
