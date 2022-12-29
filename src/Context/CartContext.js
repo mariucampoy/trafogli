@@ -6,6 +6,9 @@ export function CartContextProvider(props){
 
 const [cart, setCart] = useState([])
 const [show, setShow] = useState(false);
+
+
+
 const value = {cart, addItem, totalItemsInCart, totalPriceInCart, removeItem, clear, show, handleShow, handleClose }
 
 

@@ -1,5 +1,4 @@
 import React, { useState, useContext } from 'react'
-import { Link } from 'react-router-dom'
 import cartContext from '../../Context/CartContext';
 import "./itemDetail.css"
 
@@ -20,6 +19,8 @@ function ItemDetail({ product }) {
         if (count > 1)
             setCount(count - 1)
     }
+
+
 
     function handleChange(e) {
         setSize(e.target.value)

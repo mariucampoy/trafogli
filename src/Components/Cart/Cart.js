@@ -43,7 +43,7 @@ function Cart() {
 
                 <div className='cart-container'>
                     <div className='cart-img'>
-                        <img src={item.img}></img>
+                        <img src={item.img[0]}></img>
                     </div>
 
                     <div className='cart-detail'>
