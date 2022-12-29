@@ -14,6 +14,7 @@ function ItemList(props) {
                     img={product.img}
                     title={product.title}
                     price={product.price}
+                    color={product.color}
 
                 />
             ))

@@ -5,12 +5,13 @@ const cartContext = createContext()
 export function CartContextProvider(props){
 
 const [cart, setCart] = useState([])
-const value = {cart, addItem, totalItemsInCart, totalPriceInCart, removeItem, clear}
+const [show, setShow] = useState(false);
+const value = {cart, addItem, totalItemsInCart, totalPriceInCart, removeItem, clear, show, handleShow, handleClose }
 
 
 function addItem(itemData){
 
-    let itemFound = cart.find(itemInCart => itemInCart.id === itemData.id && itemInCart.size == itemData.size && itemInCart.colour == itemData.colour)
+    let itemFound = cart.find(itemInCart => itemInCart.id === itemData.id && itemInCart.size === itemData.size && itemInCart.colour === itemData.colour)
 
     if(itemFound){
 
@@ -51,14 +52,17 @@ function totalPriceInCart() {
 
 
 
-function removeItem(itemId){
-    let newCart = cart.filter ((item) => item.id !== itemId)
+function removeItem(itemId, itemSize, itemColour){
+    let newCart = cart.filter ((item) => item.id !== itemId || item.size !== itemSize || item.colour !== itemColour)
     setCart(newCart);
 }
 
 function clear(){
     setCart([])
 }
+
+function handleShow() {setShow(true)};
+function handleClose(){ setShow(false)};
 
 
     return(

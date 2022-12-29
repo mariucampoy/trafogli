@@ -6,20 +6,20 @@ import "./cartWidget.css"
 
 function CartWidget() {
   const context = useContext(cartContext)
-  const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const Close = () => context.handleClose();
+  const Show = () => context.handleShow();
+
 
 
 
   return (
     <div className='container-cart'>
-      <div onClick={handleShow}>
+      <div onClick={()=>Show()}>
       <i class="fa-solid fa-cart-shopping cart"></i>
       </div>
 
-      <Offcanvas show={show} onHide={handleClose} placement={"end"}>
+      <Offcanvas show={context.show} onHide={()=>Close()} placement={"end"}>
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>CARRITO DE COMPRAS</Offcanvas.Title>
         </Offcanvas.Header>

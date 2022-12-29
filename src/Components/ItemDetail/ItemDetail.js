@@ -44,6 +44,8 @@ function ItemDetail({ product }) {
 
         context.addItem(itemForCart)
 
+        context.handleShow()
+
         setIsInCart(true)
 
 
