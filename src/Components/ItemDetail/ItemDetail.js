@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react'
 import cartContext from '../../Context/CartContext';
+import CarouselProduct from './CarouselProduct';
 import "./itemDetail.css"
 
 function ItemDetail({ product }) {
@@ -55,10 +56,12 @@ function ItemDetail({ product }) {
     return (
         <div className='itemDetail'>
 
-            <div className='imgThumbnails'></div>
+
 
             <div className='imgDetail'>
-                <img src={product.img[0]}></img>
+
+                <CarouselProduct img={product.img} ></CarouselProduct>
+
             </div>
 
 

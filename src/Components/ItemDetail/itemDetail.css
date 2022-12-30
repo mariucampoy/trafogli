@@ -6,13 +6,7 @@
     align-items: flex-start;
 }
 
-.imgThumbnails {
-    width: 15%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .imgDetail {
     width: 30%;
