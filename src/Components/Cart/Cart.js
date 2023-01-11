@@ -50,8 +50,8 @@ function Cart() {
                         <p>{item.title}</p>
                         <p>Precio: $ {item.precio}</p>
                         <p>Cantidad: {item.count}</p>
-                        <p>Medida: {item.size}</p>
-                        <p>Color: {item.colour}</p>
+                        <p>Medida: {item.size.toUpperCase()}</p>
+                        <p>Color: {item.colour.toUpperCase()}</p>
                     </div>
 
                     <button className='delete-button' onClick={() => removeItem(item.id, item.size, item.colour)}><img className='delete-img' src="/img/delete-button.svg"></img></button>
