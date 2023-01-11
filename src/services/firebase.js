@@ -41,6 +41,7 @@ export async function getItemsFromAPI() {
           id: doc.id,
         };
       });
+
       return products;
 
     } catch (error) {
@@ -68,10 +69,13 @@ export async function getSingleItemFromAPI(id) {
   }
 
 
+
+
 export async function getItemsFromAPIByCategory(categoryId) {
 
     const docRef = collection(DB, "products2");
     const myQuery = query(docRef, where("category", "==", categoryId));
+
 
     const docSnap = await getDocs(myQuery);
 

@@ -10,9 +10,9 @@ function Landing() {
             <CarouselBoostrap />
 
             <div className='container-categoryItem'>
-                <CategoryItem link="/category/Edredon" title="Edredón" text="Edredon" img="/img/category-edredon.jpeg"></CategoryItem>
+                <CategoryItem link="/category/Edredon" title="Edredón" text="Edredón" img="/img/category-edredon.jpeg"></CategoryItem>
                 <CategoryItem link="/category/Sabanas" title="Sábanas" text="Sábanas" img="/img/category-sabanas.jpeg"></CategoryItem>
-                <CategoryItem link="/category/Fundas" title="Funda Almohada" text="fundas" img="/img/category-funda.jpeg"></CategoryItem>
+                <CategoryItem link="/category/Fundas" title="Funda Almohada" text="Fundas" img="/img/category-funda.jpeg"></CategoryItem>
             </div>
 
             <div className='container-categoryItem'>

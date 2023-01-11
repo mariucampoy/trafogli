@@ -15,8 +15,8 @@
 
 .item img{
     width: 100%;
-    
-    
+
+
 }
 
 .item p{
@@ -33,6 +33,16 @@
 
 .item-description{
     height: 100px;
+}
+
+.itemColors {
+    margin-top: -40px;
+    margin-bottom: 10px;
+}
+
+.item-price{
+    margin-top: -10px;
+    margin-bottom: 10px;
 }
 
 

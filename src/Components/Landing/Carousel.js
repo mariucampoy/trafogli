@@ -4,7 +4,7 @@ import "./landing.css"
 
 function CarouselBoostrap() {
     return (
-        <Carousel className='carousel'>
+        <Carousel className='carousel-landing'>
 
             <Carousel.Item>
                 <img

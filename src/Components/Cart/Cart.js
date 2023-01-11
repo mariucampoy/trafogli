@@ -48,7 +48,7 @@ function Cart() {
 
                     <div className='cart-detail'>
                         <p>{item.title}</p>
-                        <p>Precio: $ {item.price}</p>
+                        <p>Precio: $ {item.precio}</p>
                         <p>Cantidad: {item.count}</p>
                         <p>Medida: {item.size}</p>
                         <p>Color: {item.colour}</p>

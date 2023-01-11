@@ -8,6 +8,7 @@ function ItemDetail({ product }) {
     const [count, setCount] = useState(1);
     const [size, setSize] = useState("Queen");
     const [colour, setColour] = useState("blanco");
+    const [precio, setPrecio] = useState(product.price[0]);
     const [image, setImage] = useState("");
     const [isInCart, setIsInCart] = useState(false)
     const context = useContext(cartContext)
@@ -25,23 +26,27 @@ function ItemDetail({ product }) {
 
     function handleChange(e) {
         setSize(e.target.value)
+        let indexPrice = product.medida.indexOf(e.target.value)
+        setPrecio(product.price[indexPrice])
 
     }
 
     function handleColour(col) {
         setColour(col)
+        let indexColor = product.color.indexOf(col)
         setImage()
 
 
     }
 
 
-    function onAddToCart(count, size, colour) {
+    function onAddToCart(count, size, colour, precio) {
         const itemForCart = {
             ...product,
             count,
             size,
             colour,
+            precio
         }
 
         context.addItem(itemForCart)
@@ -67,7 +72,7 @@ function ItemDetail({ product }) {
 
             <div className='contentDetail'>
                 <p className='contentDetail-Title'>{product.title}</p>
-                <p className='contentDetail-Price'>${product.price}
+                <p className='contentDetail-Price'>${precio}
                 </p>
 
 
@@ -104,15 +109,15 @@ function ItemDetail({ product }) {
 
                     {!isInCart ? (
                         <div>
-                            <button onClick={() => onAddToCart(count, size, colour)} className='addCart'>Agregar al carrito</button>
-                            <button>Volver al menu</button>
+                            <button onClick={() => onAddToCart(count, size, colour, precio)} className='addCart'>Agregar al carrito</button>
+                            <button className='btndetail-backhome'>Volver al menu</button>
                         </div>
                     ) : (
 
                         <div>
                             <div>
-                                <button onClick={() => onAddToCart(count, size, colour)} className='addCart'>Agregar al carrito</button>
-                                <button>Volver al menu</button>
+                                <button onClick={() => onAddToCart(count, size, colour, precio)} className='addCart'>Agregar al carrito</button>
+                                <button className='btndetail-backhome'>Volver al menu</button>
                             </div>
 
 

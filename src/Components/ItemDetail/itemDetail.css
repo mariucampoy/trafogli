@@ -9,7 +9,7 @@
 
 
 .imgDetail {
-    width: 30%;
+    width: 35%;
     margin-top: 2%;
 }
 
@@ -39,7 +39,7 @@
 
 .itemColor p {
     font-size: 1rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     font-weight: bold;
 }
 
@@ -75,15 +75,53 @@
 
 .itemCount button{
     margin: 0% 5%;
-    height: 10%;
+    width: 2rem;
+    border: 0;
+    border-radius: 50%;
 }
 
 .itemCount p{
     margin: 0% 0%;
+    font-weight: bold;
 }
 
 .addCart{
-    margin: 5% 5%;
+    margin: 5% 1%;
     width: 70%;
     padding: 1% 0%;
+    width: 150px;
+    background-color: rgba(73, 88, 54, 0.654);
+    color: white;
+    border: none;
+    padding: 0.5% 0.5%;
+    font-size: 90%;
 }
+
+.btndetail-addCart:hover{
+    background-color: rgba(97, 106, 84, 0.654);
+}
+
+.btndetail-backhome{
+    margin: 5% 1%;
+    width: 70%;
+    padding: 1% 0%;
+    width: 150px;
+    background-color: rgba(128, 128, 128, 0.654);
+    color: white;
+    border: none;
+    padding: 0.5% 0.5%;
+    font-size: 90%;
+}
+
+.btndetail-backhome:hover{
+    background-color: rgba(97, 106, 84, 0.654);
+}
+
+
+
+.carousel-product{
+    width: 30vw;
+}
+
+
+
