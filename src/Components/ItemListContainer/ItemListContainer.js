@@ -14,6 +14,12 @@ function ItemListContainer() {
 
   const { filteredSize, filtrarMedida, filtrarColor, filteredColor, filteredCategory, filtrarCategoria } = useContext(cartContext)
 
+  let initialFilters = {
+    category: [],
+    medida: [],
+    color: []
+  }
+
   let defaultFilters = {
     category: filteredCategory,
     medida: filteredSize,
@@ -65,7 +71,9 @@ function ItemListContainer() {
     getItemsFromAPI().then((itemsDB) => {
       setFilteredProductList(itemsDB)
 
+      console.log(filteredCategory)
       console.log(filteredColor)
+      console.log(filteredSize)
     })
   },[])
 
@@ -112,6 +120,7 @@ function ItemListContainer() {
 
     filterData(productList, query)
 
+    console.log(filteredCategory)
     console.log(filteredColor)
     console.log(filteredSize)
 
@@ -128,7 +137,7 @@ function ItemListContainer() {
             
           <div><p>{filteredCategory}</p><button onClick={() => filtrarCategoria([])} >X</button></div>
           <div><p>{filteredColor}</p> <button onClick={() => filtrarColor([])}>X</button></div>
-          <div><p>{filteredSize}</p> <button onClick={() => filtrarMedida([])}>X</button></div>
+          <div><p>{filteredSize}</p> <button onClick={() => filtrarMedida(null)}>X</button></div>
           
           </div>
 

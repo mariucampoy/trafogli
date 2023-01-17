@@ -79,7 +79,7 @@ function filtrarCategoria(valorCategoria){
 }
 
 function filtrarMedida(valorMedida){
-    setFilteredSize([valorMedida])
+    setFilteredSize(valorMedida)
 }
 
 function filtrarColor(valorColor){
