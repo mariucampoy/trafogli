@@ -7,7 +7,7 @@ function ItemDetail({ product }) {
 
     const [count, setCount] = useState(1);
     const [size, setSize] = useState("Queen");
-    const [colour, setColour] = useState("blanco");
+    const [colour, setColour] = useState(product.color[0]);
     const [precio, setPrecio] = useState(product.price[0]);
     const [image, setImage] = useState("");
     const [isInCart, setIsInCart] = useState(false)

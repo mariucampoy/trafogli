@@ -8,9 +8,13 @@ import ItemListAll from '../ItemList/ItemListAll'
 
 
 function ItemListContainer() {
+
   const [productList, setProductList] = useState([])
   const [filteredProductList, setFilteredProductList] = useState([])
+
   const { filteredSize, filtrarMedida, filtrarColor, filteredColor, filteredCategory, filtrarCategoria } = useContext(cartContext)
+
+
 
   let defaultFilters = {
     category: filteredCategory,
@@ -23,6 +27,8 @@ function ItemListContainer() {
 
     getItemsFromAPI().then((itemsDB) => {
       setFilteredProductList(itemsDB)
+
+
     })
   },[])
 
@@ -72,6 +78,7 @@ function ItemListContainer() {
 
     filterData(productList, query)
 
+
   }, [filteredSize, filteredColor, filteredCategory])
 
   return (
@@ -80,9 +87,15 @@ function ItemListContainer() {
       <div className='container-filter-items'>
         <div className='filter'>
 
-          <div><p>{filteredCategory}</p><button>X</button></div>
-          <div><p>{filteredSize}</p> <button>X</button></div>
-          <div><p>{filteredColor}</p> <button>X</button></div>
+          <div>
+            <h5>Filtros Aplicados</h5>
+
+          <div><p>{filteredCategory}</p><button onClick={() => filtrarCategoria([])} >X</button></div>
+          <div><p>{filteredColor}</p> <button onClick={() => filtrarColor([])}>X</button></div>
+          <div><p>{filteredSize}</p> <button onClick={() => filtrarMedida(null)}>X</button></div>
+
+          </div>
+
           <h2>Categorias</h2>
 
           <button onClick={() => filtrarCategoria('')}>VER TODOS</button>

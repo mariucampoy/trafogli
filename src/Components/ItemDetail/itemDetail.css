@@ -55,6 +55,24 @@
 
 }
 
+.btn-color-camel{
+    background-color: #C19A6B;
+    border: 0.5px solid black;
+
+}
+
+.btn-color-grisclaro{
+    background-color: rgb(155, 153, 153);
+    border: 0.5px solid black;
+
+}
+
+.btn-color-grisoscuro{
+    background-color: rgb(94, 94, 94);
+    border: 0.5px solid black;
+
+}
+
 .btn-color {
     width: 1.5rem;
     height: 1.5rem;
