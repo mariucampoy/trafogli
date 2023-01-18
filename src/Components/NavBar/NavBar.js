@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import CartWidget from '../CartWidget/CartWidget'
 import Dropdown from './Dropdown'
+import DropDownButton from './DropDownButton'
 
 
 
@@ -13,9 +14,9 @@ function NavBar() {
   return (
     <div className='navBar'>
 
-    <div className='promocion'>
+    {/* <div className='promocion'>
     Hasta 3 cuotas sin interés - 20% de descuento por transferencia bancaria - Envíos gratis.
-    </div>
+    </div> */}
 
       <div className='sub-navbar'>
 
@@ -42,6 +43,7 @@ function NavBar() {
 
       <Link className='a-large' to='/quienes-somos'>QUIÉNES SOMOS</Link>
       <Dropdown></Dropdown>
+      <DropDownButton></DropDownButton>
       <Link className='a-large' to='/preguntas-frecuentes'>PREGUNTAS FRECUENTES</Link>
       <Link className='a-large' to='/terminos-y-condiciones'>TÉRMINOS Y CONDICIONES</Link>
       <Link className='a-large' to='/contacto'>CONTACTO</Link>

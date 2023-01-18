@@ -1,5 +1,3 @@
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
 import React, { useState, useContext } from 'react'
 import { useNavigate } from "react-router-dom";
 import cartContext from '../../Context/CartContext'
@@ -8,6 +6,8 @@ import "./dropdownbutton.css"
 
 
 function DropDownButton() {
+
+
 
     const [open, setOpen] = useState(false);
 
@@ -30,6 +30,7 @@ function DropDownButton() {
 
         filtrarCategoria('Edredon')
         setOpen(false)
+        navigate("/productos")
     };
 
 
@@ -37,25 +38,30 @@ function DropDownButton() {
 
         filtrarCategoria('Sabanas')
         setOpen(false)
+        navigate("/productos")
     };
 
     const handleMenuFundas = () => {
 
         filtrarCategoria('Fundas')
         setOpen(false)
+        navigate("/productos")
     };
 
     const handleMenuMantas = () => {
 
         filtrarCategoria('Mantas')
         setOpen(false)
+        navigate("/productos")
     };
 
     const handleMenuKimonos = () => {
 
         filtrarCategoria('Kimonos')
         setOpen(false)
+        navigate("/productos")
     };
+
 
 
     return (
