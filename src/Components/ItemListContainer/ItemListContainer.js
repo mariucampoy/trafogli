@@ -2,9 +2,9 @@ import React, { useEffect, useState, useContext } from 'react'
 import cartContext from '../../Context/CartContext'
 import { Link } from 'react-router-dom'
 import ItemList from '../ItemList/ItemList'
-import { getItemsFromAPI, getItemsFromAPIByCategory, getItemsFromAPIByColor, getItemsFromAPIBySizes, getItemsFromAPIFiltered } from '../../services/firebase'
-import { useParams } from "react-router-dom"
+import { getItemsFromAPI } from '../../services/firebase'
 import "./itemListContainer.css"
+import ItemListAll from '../ItemList/ItemListAll'
 
 
 function ItemListContainer() {
@@ -18,43 +18,6 @@ function ItemListContainer() {
     color: filteredColor
   }
 
-  // let categoryid = useParams().categoryid
-  // let colorid = useParams().colorid
-  // let medidaid = useParams().medidaid
-
-  // useEffect(() => {
-  //   if (categoryid) {
-  //     getItemsFromAPIByCategory(categoryid).then((itemsDB) => {
-  //       setProductList(itemsDB)
-  //     })
-  //   }
-  //   else if (filteredSize !== "") {
-  //     getItemsFromAPIBySizes(filteredSize).then((itemsDB) => {
-  //       setProductList(itemsDB)
-  //     })
-  //   }
-
-  //   else if (filteredColor !== "") {
-  //         getItemsFromAPIByColor(filteredColor).then((itemsDB) => {
-  //           setProductList(itemsDB)
-  //         })
-  //       }
-
-  //   else {
-  //     getItemsFromAPI().then((itemsDB) => {
-  //       setProductList(itemsDB)
-  //     })
-  //   }
-
-  // }, [categoryid, colorid, medidaid, filteredSize, filteredColor])
-
-  // useEffect(() => {
-
-  //     getItemsFromAPI().then((itemsDB) => {
-  //       setFilteredProductList(itemsDB)
-
-  //     })
-  // },[])
 
   useEffect ( () => {
 
@@ -62,6 +25,9 @@ function ItemListContainer() {
       setFilteredProductList(itemsDB)
     })
   },[])
+
+
+
 
   useEffect(() => {
 
@@ -93,7 +59,7 @@ function ItemListContainer() {
         for (let key in query) {
 
           if (!item[key].includes(query[key][0])) {
-            // if (item[key] === undefined || !query[key].includes(item[key])) {
+
             return false;
           }
         }
@@ -126,39 +92,45 @@ function ItemListContainer() {
           <button onClick={() => filtrarCategoria('Mantas')}>MANTAS</button>
           <button onClick={() => filtrarCategoria('Kimonos')}>KIMONOS</button>
 
-          {/* <Link className='a-large' to='/productos'> <b> TODAS </b></Link>
-          <Link className='a-large' to='/category/Edredon'>EDREDÓN</Link>
-          <Link className='a-large' to='/category/Sabanas'>SÁBANAS</Link>
-          <Link className='a-large' to='/category/Fundas'>FUNDA ALMOHADA</Link>
-          <Link className='a-large' to='/category/Mantas'>MANTAS</Link>
-          <Link className='a-large' to='/category/Kimonos'>KIMONOS</Link> */}
+
         </div>
 
-        <div className='filter'>
+        {/* <div className='filter'>
           <h2>Filtros</h2>
           <h4>Color</h4>
 
           <button onClick={() => filtrarColor('blanco')}>Blanco</button>
           <button onClick={() => filtrarColor('gris')}>Gris</button>
 
-          {/* <Link className='a-large' to='/color/blanco'>Blanco</Link>
-          <Link className='a-large' to='/color/gris'>Gris</Link> */}
-
           <h4>Medidas</h4>
           <button onClick={() => filtrarMedida('queen')}>Queen</button>
           <button onClick={() => filtrarMedida('king')}>King</button>
           <button onClick={() => filtrarMedida('superking')}>Super King</button>
 
-          {/* <Link className='a-large' to='/medida/queen'>Queen</Link>
-          <Link className='a-large' to='/medida/king'>King</Link>
-          <Link className='a-large' to='/medida/superking'>Super King</Link> */}
-        </div>
+        </div> */}
 
       </div>
+
+      { filteredCategory == "" ? (
+
+
+      <div>
+
+      <ItemListAll productList={filteredProductList} />
+
+    </div>
+      ):(
 
       <div>
         <ItemList productList={filteredProductList} />
-      </div>
+
+    </div>
+      )
+
+
+
+      }
+
 
     </div>
   )

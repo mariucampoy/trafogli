@@ -1,14 +1,14 @@
 import React from 'react'
-import Item from '../Item/Item'
+import ItemAll from '../Item/ItemAll'
 import "./itemList.css"
 
-function ItemList(props) {
+function ItemListAll(props) {
     return (
         <div className='itemList'>
 
             {props.productList.map(product => (
 
-                <Item
+                <ItemAll
                     key={product.id}
                     product={product}
 
@@ -20,4 +20,4 @@ function ItemList(props) {
     )
 }
 
-export default ItemList
+export default ItemListAll

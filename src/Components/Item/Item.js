@@ -2,30 +2,24 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import "./item.css"
 
-function Item(props) {
+function Item({product}) {
     return (
 
         <div className='item'>
 
-            <img src={props.img[0]}></img>
-            <p className='item-description'><Link to={`/detail/${props.id}`}>{props.title}</Link></p>
+        <Link to={`/detail/${product.id}`}><img src={product.subcategoryImg}></img> </Link>
+            <h3 className='item-description'><Link to={`/detail/${product.id}`}>{product.subcategory}</Link></h3>
 
-            <div className="itemColors">
-            {props.color.map(col => (
-                        <button className={`btn-color btn-color-${col}`}></button>
-                    ))}
-            </div>
-
-            <p className='item-price'>${props.price[0]}</p>
+            <p className='item-description'>{product.subcategoryDescription}</p>
 
 
-            <Link to={`/detail/${props.id}`}>
-            <button className='btndetail'>VER MAS</button>
+            <Link to={`/detail/${product.id}`}>
+            <button className='btndetail'>VER</button>
             </Link>
         </div>
     )
 }
 
-//  btn btn-secondary btn-block
+
 
 export default Item

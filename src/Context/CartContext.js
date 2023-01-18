@@ -11,6 +11,9 @@ const[filteredCategory, setFilteredCategory] = useState([])
 const[filteredColor, setFilteredColor] = useState([])
 const[filteredSize, setFilteredSize] = useState([])
 
+
+
+
 // const defaultFilters = {    category: filteredCategory,
 //                             medida: filteredSize,
 //                             color: filteredColor }
@@ -18,8 +21,7 @@ const[filteredSize, setFilteredSize] = useState([])
 
 
 const value = {cart, addItem, totalItemsInCart, totalPriceInCart, removeItem, clear, show, handleShow, handleClose,
-                filteredCategory, filtrarCategoria, filteredColor, filtrarColor, filteredSize, filtrarMedida
-             }
+                filteredCategory, filtrarCategoria, filteredColor, filtrarColor, filteredSize, filtrarMedida  }
 
 function addItem(itemData){
 
@@ -76,6 +78,7 @@ function handleClose(){ setShow(false)};
 
 function filtrarCategoria(valorCategoria){
     setFilteredCategory([valorCategoria])
+
 }
 
 function filtrarMedida(valorMedida){
@@ -85,6 +88,7 @@ function filtrarMedida(valorMedida){
 function filtrarColor(valorColor){
     setFilteredColor([valorColor])
 }
+
 
 
 // function buildFilter(defaultFilters){
