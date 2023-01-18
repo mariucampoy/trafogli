@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react'
 import cartContext from '../../Context/CartContext'
-import { Link } from 'react-router-dom'
 import ItemList from '../ItemList/ItemList'
 import { getItemsFromAPI } from '../../services/firebase'
 import "./itemListContainer.css"
@@ -23,14 +22,14 @@ function ItemListContainer() {
   }
 
 
-  useEffect ( () => {
+  useEffect(() => {
 
     getItemsFromAPI().then((itemsDB) => {
       setFilteredProductList(itemsDB)
 
 
     })
-  },[])
+  }, [])
 
 
 
@@ -57,23 +56,23 @@ function ItemListContainer() {
 
     function filterData(productList, query) {
 
+      if(filteredCategory == ""){
+        setFilteredProductList(productList)
+
+      }
+      else{
+
       const filteredData = productList.filter((item) => {
-        if (JSON.stringify(query) === '{}') {
-          console.log('test')
-          setFilteredProductList(productList);
-        } else {
-        for (let key in query) {
-
-          if (!item[key].includes(query[key][0])) {
-
-            return false;
-          }
+          for (let key in query) {
+            if (!(item[key]==(query[key][0]))) {
+              return false;
+            }
+          return true;
         }
-        return true;}
       });
 
       setFilteredProductList(filteredData);
-
+    }
     }
 
     filterData(productList, query)
@@ -90,9 +89,9 @@ function ItemListContainer() {
           <div>
             <h5>Filtros Aplicados</h5>
 
-          <div><p>{filteredCategory}</p><button onClick={() => filtrarCategoria([])} >X</button></div>
-          <div><p>{filteredColor}</p> <button onClick={() => filtrarColor([])}>X</button></div>
-          <div><p>{filteredSize}</p> <button onClick={() => filtrarMedida(null)}>X</button></div>
+            <div><p>{filteredCategory}</p><button onClick={() => filtrarCategoria([])} >X</button></div>
+            <div><p>{filteredColor}</p> <button onClick={() => filtrarColor([])}>X</button></div>
+            <div><p>{filteredSize}</p> <button onClick={() => filtrarMedida(null)}>X</button></div>
 
           </div>
 
@@ -100,8 +99,10 @@ function ItemListContainer() {
 
           <button onClick={() => filtrarCategoria('')}>VER TODOS</button>
           <button onClick={() => filtrarCategoria('Edredon')}>EDREDÓN</button>
+          <button onClick={() => filtrarCategoria('Fundas de Edredón')}>FUNDAS EDREDÓN</button>
           <button onClick={() => filtrarCategoria('Sabanas')}>SABANAS</button>
-          <button onClick={() => filtrarCategoria('Fundas')}>FUNDAS</button>
+          <button onClick={() => filtrarCategoria('Sabanas Ajustables')}>SABANAS AJUSTABLES</button>
+          <button onClick={() => filtrarCategoria('Fundas de Almohada')}>FUNDAS</button>
           <button onClick={() => filtrarCategoria('Mantas')}>MANTAS</button>
           <button onClick={() => filtrarCategoria('Kimonos')}>KIMONOS</button>
 
@@ -124,25 +125,19 @@ function ItemListContainer() {
 
       </div>
 
-      { filteredCategory == "" ? (
+      {filteredCategory == "" ? (
 
+        <div>
+          <ItemListAll productList={filteredProductList} />
+        </div>
 
-      <div>
+      ) : (
 
-      <ItemListAll productList={filteredProductList} />
+        <div>
+          <ItemList productList={filteredProductList} />
+        </div>
 
-    </div>
-      ):(
-
-      <div>
-        <ItemList productList={filteredProductList} />
-
-    </div>
-      )
-
-
-
-      }
+      )}
 
 
     </div>
