@@ -9,7 +9,7 @@ function CarouselBoostrap() {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="/img/carousel1.webp"
+                    src="/img/carousel3.webp"
                     alt="First slide"
                 />
                 <Carousel.Caption>
@@ -34,7 +34,7 @@ function CarouselBoostrap() {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="/img/carousel3.webp"
+                    src="/img/carousel1.webp"
                     alt="Third slide"
                 />
 

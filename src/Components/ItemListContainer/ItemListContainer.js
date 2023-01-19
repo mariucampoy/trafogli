@@ -1,147 +1,96 @@
-import React, { useEffect, useState, useContext } from 'react'
-import cartContext from '../../Context/CartContext'
-import ItemList from '../ItemList/ItemList'
-import { getItemsFromAPI } from '../../services/firebase'
-import "./itemListContainer.css"
-import ItemListAll from '../ItemList/ItemListAll'
-
+import React, { useEffect, useState, useContext } from "react";
+import cartContext from "../../Context/CartContext";
+import ItemList from "../ItemList/ItemList";
+import { getItemsFromAPI } from "../../services/firebase";
+import "./itemListContainer.css";
+import ItemListAll from "../ItemList/ItemListAll";
 
 function ItemListContainer() {
+  
+  const [filteredProductList, setFilteredProductList] = useState([]);
 
-  const [productList, setProductList] = useState([])
-  const [filteredProductList, setFilteredProductList] = useState([])
+  const { filteredCategory, filtrarCategoria} = useContext(cartContext);
 
-  const { filteredSize, filtrarMedida, filtrarColor, filteredColor, filteredCategory, filtrarCategoria } = useContext(cartContext)
-
-
-
-  let defaultFilters = {
-    category: filteredCategory,
-    medida: filteredSize,
-    color: filteredColor
-  }
-
+  let defaultFilters = {category: filteredCategory};
 
   useEffect(() => {
 
     getItemsFromAPI().then((itemsDB) => {
-      setFilteredProductList(itemsDB)
 
+      if (filteredCategory == "") {
+        setFilteredProductList(itemsDB);
 
-    })
-  }, [])
+      } else {
 
+        function buildFilter(defaultFilters) {
+          let query = {};
 
-
-
-  useEffect(() => {
-
-    getItemsFromAPI().then((itemsDB) => {
-      setProductList(itemsDB)
-
-    })
-
-    function buildFilter(defaultFilters) {
-      let query = {};
-
-      for (let keys in defaultFilters) {
-        if (defaultFilters[keys].constructor === Array && defaultFilters[keys].length > 0) {
-          query[keys] = defaultFilters[keys];
-        }
-      }
-      return query;
-    }
-
-    let query = buildFilter(defaultFilters)
-
-    function filterData(productList, query) {
-
-      if(filteredCategory == ""){
-        setFilteredProductList(productList)
-
-      }
-      else{
-
-      const filteredData = productList.filter((item) => {
-          for (let key in query) {
-            if (!(item[key]==(query[key][0]))) {
-              return false;
+          for (let keys in defaultFilters) {
+            if (
+              defaultFilters[keys].constructor === Array &&
+              defaultFilters[keys].length > 0
+            ) {
+              query[keys] = defaultFilters[keys];
             }
-          return true;
+          }
+          return query;
         }
-      });
 
-      setFilteredProductList(filteredData);
-    }
-    }
+        let query = buildFilter(defaultFilters);
 
-    filterData(productList, query)
+        function filterData(productList, query) {
+          const filteredData = productList.filter((item) => {
+            for (let key in query) {
+              if (!(item[key] == query[key][0])) {
+                return false;
+              }
+              return true;
+            }
+          });
 
+          setFilteredProductList(filteredData);
+        }
 
-  }, [filteredSize, filteredColor, filteredCategory])
+        filterData(itemsDB, query);
+      }
+    });
+
+  }, [filteredCategory]);
 
   return (
-
-    <div className='container-item-list-container'>
-      <div className='container-filter-items'>
-        <div className='filter'>
-
-          {/* <div>
-            <h5>Filtros Aplicados</h5>
-
-            <div><p>{filteredCategory}</p><button onClick={() => filtrarCategoria([])} >X</button></div>
-            <div><p>{filteredColor}</p> <button onClick={() => filtrarColor([])}>X</button></div>
-            <div><p>{filteredSize}</p> <button onClick={() => filtrarMedida(null)}>X</button></div>
-
-          </div> */}
-
+    <div className="container-item-list-container">
+      <div className="container-filter-items">
+        <div className="filter">
           <h2>Categorias</h2>
 
-          <button onClick={() => filtrarCategoria('')}>VER TODOS</button>
-          <button onClick={() => filtrarCategoria('Edredon')}>EDREDÓN</button>
-          <button onClick={() => filtrarCategoria('Fundas de Edredón')}>FUNDAS EDREDÓN</button>
-          <button onClick={() => filtrarCategoria('Sabanas')}>SABANAS</button>
-          <button onClick={() => filtrarCategoria('Sabanas Ajustables')}>SABANAS AJUSTABLES</button>
-          <button onClick={() => filtrarCategoria('Fundas de Almohada')}>FUNDAS</button>
-          <button onClick={() => filtrarCategoria('Mantas')}>MANTAS</button>
-          <button onClick={() => filtrarCategoria('Kimonos')}>KIMONOS</button>
-
-
+          <button onClick={() => filtrarCategoria("")}>VER TODOS</button>
+          <button onClick={() => filtrarCategoria("Edredon")}>EDREDÓN</button>
+          <button onClick={() => filtrarCategoria("Fundas de Edredón")}>
+            FUNDAS EDREDÓN
+          </button>
+          <button onClick={() => filtrarCategoria("Sabanas")}>SABANAS</button>
+          <button onClick={() => filtrarCategoria("Sabanas Ajustables")}>
+            SABANAS AJUSTABLES
+          </button>
+          <button onClick={() => filtrarCategoria("Fundas de Almohada")}>
+            FUNDAS
+          </button>
+          <button onClick={() => filtrarCategoria("Mantas")}>MANTAS</button>
+          <button onClick={() => filtrarCategoria("Kimonos")}>KIMONOS</button>
         </div>
-
-        {/* <div className='filter'>
-          <h2>Filtros</h2>
-          <h4>Color</h4>
-
-          <button onClick={() => filtrarColor('blanco')}>Blanco</button>
-          <button onClick={() => filtrarColor('gris')}>Gris</button>
-
-          <h4>Medidas</h4>
-          <button onClick={() => filtrarMedida('queen')}>Queen</button>
-          <button onClick={() => filtrarMedida('king')}>King</button>
-          <button onClick={() => filtrarMedida('superking')}>Super King</button>
-
-        </div> */}
-
       </div>
 
       {filteredCategory == "" ? (
-
         <div>
           <ItemListAll productList={filteredProductList} />
         </div>
-
       ) : (
-
         <div>
           <ItemList productList={filteredProductList} />
         </div>
-
       )}
-
-
     </div>
-  )
+  );
 }
 
-export default ItemListContainer
+export default ItemListContainer;

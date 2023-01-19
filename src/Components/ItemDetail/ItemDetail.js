@@ -6,12 +6,22 @@ import "./itemDetail.css"
 function ItemDetail({ product }) {
 
     const [count, setCount] = useState(1);
-    const [size, setSize] = useState("Queen");
+    const [size, setSize] = useState(product.medida[0]);
     const [colour, setColour] = useState(product.color[0]);
     const [precio, setPrecio] = useState(product.price[0]);
     const [image, setImage] = useState("");
     const [isInCart, setIsInCart] = useState(false)
     const context = useContext(cartContext)
+
+    let indexy = colour + size
+
+    function getValueByKey(object, k) {
+        return object[k]
+      }
+ 
+  const resultado = getValueByKey(product.stock, indexy) 
+  console.log(resultado)
+
 
     function handleAdd() {
         if (count < product.stock)
@@ -35,8 +45,6 @@ function ItemDetail({ product }) {
         setColour(col)
         let indexColor = product.color.indexOf(col)
         setImage()
-
-
     }
 
 

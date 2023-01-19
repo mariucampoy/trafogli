@@ -11,15 +11,6 @@ const[filteredCategory, setFilteredCategory] = useState([])
 const[filteredColor, setFilteredColor] = useState([])
 const[filteredSize, setFilteredSize] = useState([])
 
-
-
-
-// const defaultFilters = {    category: filteredCategory,
-//                             medida: filteredSize,
-//                             color: filteredColor }
-
-
-
 const value = {cart, addItem, totalItemsInCart, totalPriceInCart, removeItem, clear, show, handleShow, handleClose,
                 filteredCategory, filtrarCategoria, filteredColor, filtrarColor, filteredSize, filtrarMedida  }
 
@@ -89,34 +80,7 @@ function filtrarColor(valorColor){
     setFilteredColor([valorColor])
 }
 
-
-
-// function buildFilter(defaultFilters){
-//     let query = {};
-//     for (let keys in defaultFilters) {
-//         if (defaultFilters[keys].constructor === Array && defaultFilters[keys].length > 0) {
-//             query[keys] = defaultFilters[keys];
-//         }
-//     }
-//     return query;
-// }
-
-// let filterData = (productList, query) => {
-//   const filteredData = productList.filter( (item) => {
-//       for (let key in query) {
-//           if (item[key] === undefined || !query[key].includes(item[key])) {
-//               return false;
-//           }
-//       }
-//       return true;
-//   });
-//   return filteredData;
-// };
-
-
-
-
-    return(
+return (
         <cartContext.Provider value={value}>
         {props.children}
         </cartContext.Provider>

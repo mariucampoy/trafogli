@@ -13,7 +13,7 @@ function DropDownButton() {
 
     const navigate = useNavigate()
 
-    const { filtrarCategoria } = useContext(cartContext)
+    const { filtrarCategoria, filteredCategory, } = useContext(cartContext)
 
     function handleOpen() {
         setOpen(!open);
@@ -29,6 +29,9 @@ function DropDownButton() {
     const handleMenuEdredon = () => {
 
         filtrarCategoria('Edredon')
+
+        console.log(filteredCategory)
+
         setOpen(false)
         navigate("/productos")
     };
@@ -36,30 +39,33 @@ function DropDownButton() {
 
     const handleMenuSabanas = () => {
 
+        navigate("/productos")
         filtrarCategoria('Sabanas')
         setOpen(false)
-        navigate("/productos")
+        
     };
 
     const handleMenuFundas = () => {
-
         filtrarCategoria('Fundas')
-        setOpen(false)
         navigate("/productos")
+        setOpen(false)
+        
     };
 
     const handleMenuMantas = () => {
 
+        navigate("/productos")
         filtrarCategoria('Mantas')
         setOpen(false)
-        navigate("/productos")
+        
     };
 
     const handleMenuKimonos = () => {
 
+        navigate("/productos")
         filtrarCategoria('Kimonos')
         setOpen(false)
-        navigate("/productos")
+        
     };
 
 

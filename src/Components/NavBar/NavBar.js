@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import CartWidget from '../CartWidget/CartWidget'
-import Dropdown from './Dropdown'
 import DropDownButton from './DropDownButton'
 
 
@@ -42,7 +41,6 @@ function NavBar() {
       <div className='container-categorias'>
 
       <Link className='a-large' to='/quienes-somos'>QUIÉNES SOMOS</Link>
-      <Dropdown></Dropdown>
       <DropDownButton></DropDownButton>
       <Link className='a-large' to='/preguntas-frecuentes'>PREGUNTAS FRECUENTES</Link>
       <Link className='a-large' to='/terminos-y-condiciones'>TÉRMINOS Y CONDICIONES</Link>
