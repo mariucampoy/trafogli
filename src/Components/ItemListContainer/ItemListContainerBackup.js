@@ -4,11 +4,6 @@ import ItemList from "../ItemList/ItemList";
 import { getItemsFromAPI } from "../../services/firebase";
 import "./itemListContainer.css";
 import ItemListAll from "../ItemList/ItemListAll";
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
-
 
 
 function ItemListContainer() {
@@ -63,31 +58,30 @@ function ItemListContainer() {
   }, [filteredCategory]);
 
   return (
-    <Container fluid>
-      <Row>
+    <div className="container-item-list-container">
+      <div className="container-filter-items">
+        <div className="filter">
+          <h2>Categorias</h2>
 
-        <Col xs={2}>
-          <div className="container-filter-items">
+          <button onClick={() => filtrarCategoria("")}>VER TODOS</button>
+          <button onClick={() => filtrarCategoria("Edredon")}>EDREDÓN</button>
+          <button onClick={() => filtrarCategoria("Fundas de Edredón")}>
+            FUNDAS EDREDÓN
+          </button>
+          <button onClick={() => filtrarCategoria("Sabanas")}>SABANAS</button>
+          <button onClick={() => filtrarCategoria("Sabanas Ajustables")}>
+            SABANAS AJUSTABLES
+          </button>
+          <button onClick={() => filtrarCategoria("Fundas de Almohada")}>
+            FUNDAS
+          </button>
+          <button onClick={() => filtrarCategoria("Mantas")}>MANTAS</button>
+          <button onClick={() => filtrarCategoria("Kimonos")}>KIMONOS</button>
           
-            <h2>CATEGORIAS</h2>
-            
-            <Button variant='dark' onClick={() => filtrarCategoria("")}>VER TODOS</Button>
-            <Button variant='dark' onClick={() => filtrarCategoria("Edredon")}>EDREDÓN</Button>
-            <Button variant='dark' onClick={() => filtrarCategoria("Fundas de Edredón")}>FUNDAS EDREDÓN</Button>
-            <Button variant='dark' onClick={() => filtrarCategoria("Sabanas")}>SABANAS</Button>
-            <Button variant='dark' onClick={() => filtrarCategoria("Sabanas Ajustables")}>SABANAS AJUSTABLES</Button>
-            <Button variant='dark' onClick={() => filtrarCategoria("Fundas de Almohada")}>FUNDAS</Button>
-            <Button variant='dark' onClick={() => filtrarCategoria("Mantas")}>MANTAS</Button>
-            <Button variant='dark' onClick={() => filtrarCategoria("Kimonos")}>KIMONOS</Button>
-            
-          </div>
-          
-        </Col>
+        </div>
+      </div>
 
-        <Col>
-          <Container>
-            <Row>
-        {filteredCategory == "" ? (
+      {filteredCategory == "" ? (
         <div>
           <ItemListAll productList={filteredProductList} />
         </div>
@@ -95,14 +89,8 @@ function ItemListContainer() {
         <div>
           <ItemList productList={filteredProductList} />
         </div>
-      )}  
-        </Row>
-        </Container>
-        </Col>
-      </Row>
-    </Container>
-
-    
+      )}
+    </div>
   );
 }
 

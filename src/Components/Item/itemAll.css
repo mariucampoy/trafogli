@@ -1,5 +1,5 @@
 .item{
-    flex-grow: 1;
+    flex-grow: 0;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;

@@ -1,10 +1,10 @@
 import React from 'react'
 import ItemAll from '../Item/ItemAll'
-import "./itemList.css"
+import "./itemListAll.css"
 
 function ItemListAll(props) {
     return (
-        <div className='itemList'>
+        <div className='itemListAll'>
 
             {props.productList.map(product => (
 

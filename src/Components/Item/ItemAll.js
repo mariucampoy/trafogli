@@ -2,10 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import "./itemAll.css"
 
+
 function ItemAll({product}) {
     return (
-
-        <div className='item'>
+    
+         <div className='item'>
 
             <img src={product.img[0]}></img>
             <p className='item-description'><Link to={`/detail/${product.id}`}>{product.title}</Link></p>
@@ -23,6 +24,8 @@ function ItemAll({product}) {
             <button className='btndetail'>VER MAS</button>
             </Link>
         </div>
+       
+
     )
 }
 
