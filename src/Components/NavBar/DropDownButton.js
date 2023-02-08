@@ -2,70 +2,57 @@ import React, { useState, useContext } from 'react'
 import { useNavigate } from "react-router-dom";
 import cartContext from '../../Context/CartContext'
 import "./dropdownbutton.css"
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 
 
 
 function DropDownButton() {
 
-
-
-    const [open, setOpen] = useState(false);
-
     const navigate = useNavigate()
 
     const { filtrarCategoria, filteredCategory, } = useContext(cartContext)
 
-    function handleOpen() {
-        setOpen(!open);
-    };
-
-
     const handleMenuVerTodos = () => {
         filtrarCategoria('')
-        setOpen(false)
         navigate("/productos");
     };
 
     const handleMenuEdredon = () => {
-
         filtrarCategoria('Edredon')
+        navigate("/productos")
+    };
 
-        console.log(filteredCategory)
 
-        setOpen(false)
+    const handleMenuFundasEdredon = () => {
+        filtrarCategoria('Fundas de Edredón')
         navigate("/productos")
     };
 
 
     const handleMenuSabanas = () => {
-
         navigate("/productos")
         filtrarCategoria('Sabanas')
-        setOpen(false)
-        
+    };
+
+    const handleMenuSabanaAjustable = () => {
+        navigate("/productos")
+        filtrarCategoria('Sabanas Ajustables')
     };
 
     const handleMenuFundas = () => {
         filtrarCategoria('Fundas')
         navigate("/productos")
-        setOpen(false)
-        
     };
 
     const handleMenuMantas = () => {
-
         navigate("/productos")
         filtrarCategoria('Mantas')
-        setOpen(false)
-        
     };
 
     const handleMenuKimonos = () => {
-
         navigate("/productos")
         filtrarCategoria('Kimonos')
-        setOpen(false)
-        
     };
 
 
@@ -73,31 +60,21 @@ function DropDownButton() {
     return (
 
         <div>
-            <button className='menutitle a-large' onClick={() => handleOpen()}>PRODUCTOS</button>
-            {open ? (
-                <ul className="menu">
-                    <li className="menu-item">
-                        <button onClick={handleMenuVerTodos}>Ver Todos</button>
-                    </li>
-                    <div className="dropdown-divider"></div>
 
-                    <li className="menu-item">
-                        <button onClick={handleMenuEdredon}>Edredon</button>
-                    </li>
-                    <li className="menu-item">
-                        <button onClick={handleMenuSabanas}>Sabanas</button>
-                    </li>
-                    <li className="menu-item">
-                        <button onClick={handleMenuFundas}>Fundas</button>
-                    </li>
-                    <li className="menu-item">
-                        <button onClick={handleMenuMantas}>Mantas</button>
-                    </li>
-                    <li className="menu-item">
-                        <button onClick={handleMenuKimonos}>Kimonos</button>
-                    </li>
-                </ul>
-            ) : null}
+            <DropdownButton id="dropdown-item-button" title="PRODUCTOS">
+
+                <Dropdown.Item as="button" className='dropdown-category' onClick={handleMenuVerTodos}>Ver Todos</Dropdown.Item>
+                <Dropdown.Divider/>
+                <Dropdown.Item as="button" className='dropdown-category' onClick={handleMenuEdredon}>Edredón</Dropdown.Item>
+                <Dropdown.Item as="button" className='dropdown-category' onClick={handleMenuFundasEdredon}>Fundas Edredón</Dropdown.Item>
+                <Dropdown.Item as="button" className='dropdown-category' onClick={handleMenuSabanas}>Juego de Sabanas</Dropdown.Item>
+                <Dropdown.Item as="button" className='dropdown-category' onClick={handleMenuSabanaAjustable}>Sabanas Ajustables</Dropdown.Item>
+                <Dropdown.Item as="button" className='dropdown-category' onClick={handleMenuFundas}>Fundas</Dropdown.Item>
+                <Dropdown.Item as="button" className='dropdown-category' onClick={handleMenuMantas}>Mantas</Dropdown.Item>
+                <Dropdown.Item as="button" className='dropdown-category' onClick={handleMenuKimonos}>Kimonos</Dropdown.Item>
+
+            </DropdownButton>
+
         </div>
 
     )

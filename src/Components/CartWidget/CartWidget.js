@@ -3,6 +3,9 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import cartContext from '../../Context/CartContext'
 import Cart from '../Cart/Cart';
 import "./cartWidget.css"
+import Icon from '@mdi/react';
+import { mdiCartOutline } from '@mdi/js';
+
 
 function CartWidget() {
   const context = useContext(cartContext)
@@ -16,7 +19,8 @@ function CartWidget() {
   return (
     <div className='container-cart'>
       <div onClick={()=>Show()}>
-      <i class="fa-solid fa-cart-shopping cart"></i>
+      <Icon path={mdiCartOutline} size={1} />
+   
       </div>
 
       <Offcanvas show={context.show} onHide={()=>Close()} placement={"end"}>

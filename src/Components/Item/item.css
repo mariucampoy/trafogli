@@ -2,7 +2,7 @@
     flex-grow: 3;
     padding: 0;
     min-width: 200px;
-    max-width: 60vw;
+    max-width: 45vw;
     margin-top: 5vh;
     margin-bottom: 15vh;
     margin-left: 2vw;
@@ -27,6 +27,7 @@
     transform: scale(1.04);
     opacity: 0.6;
     transition: all 0.3s ease-in-out;
+    
   
 }
 
@@ -34,6 +35,7 @@
   transform: scale(1.02) translateY(10px);
   text-shadow: 1px rgb(150, 153, 182);
   transition: all 0.3s ease-in-out;
+  color: rgb(85, 85, 85);
 }
 
 .itemCatContainer:hover .itemCat-description-title a {
@@ -55,6 +57,7 @@
     position: absolute;
     top: 10%;
     left: 5%;
+    color: #ffffff
 }
 
 .itemCat-description-title a{
@@ -71,15 +74,27 @@
     width: 100%;
     height: 34vh;
     padding: 0.5rem 1rem;
-    background-color: rgba(255, 255, 255, 0.7);;
-   
+    background-color: rgba(255, 255, 255, 0.7);;   
     font-size: 0.8rem;
     font-weight: bolder;
     position: absolute;
     top: 50%;
     left: 0%;
     opacity: 0;
+    color: rgb(17, 17, 17);
 }
+
+.itemCat-description a{
+text-decoration: none;
+color: rgb(17, 17, 17);
+
+}
+
+.itemCat-description a:hover{
+    text-decoration: none;
+    color: rgb(17, 17, 17);
+    
+    }
 
 
 

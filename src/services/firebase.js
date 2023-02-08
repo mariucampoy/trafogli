@@ -50,6 +50,7 @@ export async function getItemsFromAPI() {
   }
 
 
+
 export async function getSingleItemFromAPI(id) {
 
     const docRef = doc(DB, "products2", id);

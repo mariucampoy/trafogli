@@ -4,7 +4,6 @@
     background-color: white;
     z-index: 9;
     width: 100%;
-    
 }
 
 .sub-navbar{
@@ -72,3 +71,6 @@
 
 }
 
+.a-large:hover{
+color: grey;
+}

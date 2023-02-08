@@ -5,7 +5,7 @@ import "./itemDetail.css"
 
 function CarouselProduct(props) {
     return (
-        <Carousel className='carousel-product'>
+        <Carousel variant="dark" className='carousel-product'>
 
 
             {props.img.map(image => (

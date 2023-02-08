@@ -9,21 +9,31 @@
     padding-bottom: 1rem;
     border-bottom: 1px solid grey;
     margin-bottom: 1rem;
+   
+  
 }
 
-.container-filter-items button {
+/* .container-filter-items input{
     width: 80%;
     max-width: 10rem;
     background-color: #ffffff;
     color: rgb(39, 39, 39);
-    border: none;
     padding: 0.7rem;
     font-size: 90%;
     text-align: left;
     line-height: 1rem;
-}
+    
+} */
 
-.container-filter-items button:hover {
+/* .btn-check:hover {
     background-color: #99a5ae;
 }
+ */
+
+ .category-button-item{
+     text-align: left !important;
+     padding: 0.5rem !important;
+
+ }
+
 

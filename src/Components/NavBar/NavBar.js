@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import CartWidget from '../CartWidget/CartWidget'
 import DropDownButton from './DropDownButton'
+import Icon from '@mdi/react';
+import { mdiMagnify } from '@mdi/js';
 
 
 
@@ -20,7 +22,7 @@ function NavBar() {
       <div className='sub-navbar'>
 
         <p className='buscar'> Buscar...
-        <i class="fa-solid fa-magnifying-glass"></i>
+        <Icon path={mdiMagnify} size={1} />
         </p>
 
 

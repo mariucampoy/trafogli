@@ -4,6 +4,7 @@ import CarouselBoostrap from './Carousel'
 import CategoryItem from './CategoryItem'
 import "./landing.css"
 
+
 function Landing() {
     return (
         <div>
