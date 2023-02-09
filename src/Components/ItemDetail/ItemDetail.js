@@ -133,20 +133,16 @@ function ItemDetail({ product }) {
                                     name="group1"
                                     type='radio'
                                     id='default-radio-1'
-                                    
-                                    
                                 />
-                                <hr></hr>
+                                
                                 <Form.Check
-
                                     label={`Tarjeta de Débito - ${formatter.format(payment.tarjeta * precio)}`}
                                     name="group1"
                                     type='radio'
                                     id='default-radio-2'
                                 />
-                                                                <hr></hr>
-                                <Form.Check
 
+                                <Form.Check
                                     label={`Tarjeta de Crédito - ${formatter.format(payment.tarjeta * precio)}`}
                                     name="group1"
                                     type='radio'
@@ -183,9 +179,7 @@ function ItemDetail({ product }) {
                     </div>
 
 
-
-
-                    <div>
+                    <div className='itemCount-container'>
                         <div className='itemCount'>
                             <button onClick={handleSubstract}> - </button>
                             <p>{count}</p>
@@ -195,12 +189,18 @@ function ItemDetail({ product }) {
                         <div>
                             <button onClick={() => onAddToCart(count, size, colour, precio)} className='addCart'>AGREGAR AL CARRO</button>
                         </div>
-
-
                     </div>
                 </div>
 
 
+            </div>
+
+            <div className='itemDetail-description'>
+                <p>{product.description}</p>
+                <h5>IMPORTANTE</h5>
+                <p>Los Productos sin ETIQUETA O PACKAGING ORIGINAL, que no se encuentren en perfectas condiciones 
+                    y sin ningún uso, manchados o rotos, no admiten ni cambios ni devoluciones. Las sábanas abiertas 
+                    no tienen cambio ni devolución.</p>
             </div>
         </div>
 
